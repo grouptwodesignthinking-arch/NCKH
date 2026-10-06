@@ -2,6 +2,8 @@
 
 Đánh giá ngày 06/10/2026. Căn cứ: tôn chỉ chính (§1.3, §4.2–4.5, §6.2, §13, §15.6, §18, §20, §21.3, §22–25, §28), `ton-chi-quy-tac-nghien-cuu-chi-tiet.md` (red flags) và toàn văn 12 bài báo người dùng cung cấp.
 
+**Lưu ý số mục:** bản đánh giá này dùng số mục của COB_10 **bản gốc**. Từ v2, Chương 2 đã bỏ §2.1 cũ, nên §2.2.x cũ thành §2.1.x, §2.3.x thành §2.2.x, §2.4.x thành §2.3.x, §2.5 thành §2.4, §2.6 thành §2.5, §2.7 thành §2.6.
+
 **Nguồn toàn văn:** `12_Research_Articles_Full_Text_Clean.md` (SHA-256 `9c3fb1b6…64214d7`). Tệp này không được lưu vào repo vì phần lớn các bài giữ bản quyền. Mình đã đọc phần nội dung chính của cả 12 bài, bỏ qua danh mục tài liệu tham khảo. Riêng các bảng số liệu của Gray et al. thì chỉ đọc lướt.
 
 Số thứ tự bài trong tài liệu này theo COB_12. Tệp toàn văn đánh số theo thứ tự khác.

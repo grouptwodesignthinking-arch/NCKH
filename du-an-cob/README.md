@@ -8,7 +8,7 @@ Lưu ngày 06/10/2026 theo yêu cầu của người dùng: **toàn bộ bài sa
 
 | Tệp | Nội dung | Ghi chú kiểm tra |
 |---|---|---|
-| [`COB_10-dan-y-bao-cao.md`](COB_10-dan-y-bao-cao.md) · `goc/MRF_26_COB_10.docx` | Dàn ý toàn báo cáo: phần đầu, Chương 1–5, References, Appendices A–F, AI Use Declaration. Có phân công thành viên theo mục. | 111 đoạn, 1 comment, không có tracked change. SHA-256 `7b28bfdf…5f91e`. |
+| **Bản hiện hành:** [`COB_10-dan-y-bao-cao-v2.md`](COB_10-dan-y-bao-cao-v2.md) · `MRF_26_COB_10_v2.docx`. Bản gốc: [`COB_10-dan-y-bao-cao.md`](COB_10-dan-y-bao-cao.md) · `goc/MRF_26_COB_10.docx` | Dàn ý toàn báo cáo: phần đầu, Chương 1–5, References, Appendices A–F, AI Use Declaration. Có phân công thành viên theo mục. | 111 đoạn, 1 comment, không có tracked change. SHA-256 `7b28bfdf…5f91e`. |
 | [`COB_11-aim-objectives-rq.md`](COB_11-aim-objectives-rq.md) · `goc/MRF_26_COB_11.docx` | Aim, 3 objectives, RQ1–RQ3. | 10 đoạn. SHA-256 `d35b5159…e9f0d`. |
 | [`COB_12-bo-papers.md`](COB_12-bo-papers.md) · `goc/MRF_26_COB_12.docx` | 12 papers: 2 anchor, 3 nguồn tổng hợp chính, 7 nguồn bổ trợ. Mỗi bài có thiết kế, đóng góp và vị trí dùng (gap, IQ). | 16 đoạn. SHA-256 `435ea48b…6e6b5`. |
 
@@ -131,4 +131,6 @@ Chưa xác minh DOI, năm, tập và số trang của 12 papers vì mạng của
   2. Khuyến nghị (nhóm chưa chốt): giữ Appendix A hoặc một câu dẫn ở đầu Chương 2 hay §1.5, để trả lời phê bình 5 của thầy về việc đã đọc bài thật.
   3. Gap vẫn phải giới hạn theo tập nguồn đã rà soát. Không bắt chước câu "no study…" của Wang et al. hay "significant gap" của Qi & Huang.
 
-  Tệp Word gốc `goc/MRF_26_COB_10.docx` chưa được sửa.
+  **Đã thực hiện trong v2** (`MRF_26_COB_10_v2.docx`): bỏ §2.1; Key concepts thành §2.1; §2.3–2.7 cũ thành §2.2–2.6; §1.2 trỏ tới §2.4. Đã chạy kiểm tra tính hợp lệ và kiểm tra bản render. Appendix A vẫn giữ trong khi chờ nhóm quyết định. Bản gốc trong `goc/` giữ nguyên.
+
+  **Lưu ý số mục:** mục 5 của README này và `danh-gia-dan-y-COB_10.md` dùng số mục của **bản gốc**. Quy đổi sang v2: §2.2.x → §2.1.x; §2.3.x → §2.2.x; §2.4.x → §2.3.x; §2.5 → §2.4; §2.6 → §2.5; §2.7 → §2.6.

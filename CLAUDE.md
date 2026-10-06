@@ -17,7 +17,7 @@ Trước khi làm một việc chuyên môn, mở đúng mục trong tôn chỉ 
 ## Quy chuẩn dự án COB (MRF_26)
 
 Theo yêu cầu ngày 06/10/2026, **toàn bộ bài sau này tuân thủ ba tệp trong [`du-an-cob/`](du-an-cob/README.md)**:
-- `COB_10`: dàn ý báo cáo và phân công;
+- `COB_10`: dàn ý báo cáo và phân công. **Bản hiện hành là v2** (`du-an-cob/MRF_26_COB_10_v2.docx`): đã bỏ §2.1 cũ và đánh số lại Chương 2;
 - `COB_11`: aim, objectives và RQ;
 - `COB_12`: bộ 12 papers sẽ dùng.
 
