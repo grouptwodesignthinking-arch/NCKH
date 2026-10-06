@@ -67,7 +67,7 @@ Mình chỉ ghi nhận các điểm dưới đây, không tự sửa. Quyết đ
    - "Zheng et al." ở COB_10 §2.2.4 không có trong COB_12;
    - Kallio et al. (2016) ở §3.6.2 là nguồn phương pháp, được dùng nhưng cần có trong References;
    - Merton, COR, Hirschman, Bourdieu ở §2.3.1: xem quy tắc trích dẫn qua nguồn thứ cấp ở mục 3.
-6. **Lý do chọn Hsu (2022) làm anchor.** Hsu là thí nghiệm vignette 2×2 với 210 người trưởng thành, đo cách đánh giá việc nằm thẳng. Bài này hỗ trợ được gap 4, nhưng có ít yếu tố để định hướng *thiết kế phỏng vấn* như sampling hay interview topics. Ngoài ra, COB_10 §1.4.2 loại trừ việc "khảo sát cách công chúng đánh giá". Hai điều này không mâu thuẫn trực tiếp, vì IQ4 hỏi cách participant liên hệ với đánh giá của người khác, nhưng §3.6.2 cần giải thích Hsu đóng góp gì cho guide.
+6. **Lý do chọn Hsu (2022) làm anchor** (đã có thêm căn cứ sau khi đọc toàn văn; xem `danh-gia-dan-y-COB_10.md`, mục 3.5). Hsu là thí nghiệm vignette 2×2 với 210 người trưởng thành, đo cách đánh giá việc nằm thẳng. Bài này hỗ trợ được gap 4, nhưng có ít yếu tố để định hướng *thiết kế phỏng vấn* như sampling hay interview topics. Ngoài ra, COB_10 §1.4.2 loại trừ việc "khảo sát cách công chúng đánh giá". Hai điều này không mâu thuẫn trực tiếp, vì IQ4 hỏi cách participant liên hệ với đánh giá của người khác, nhưng §3.6.2 cần giải thích Hsu đóng góp gì cho guide.
 7. **Các quyết định phương pháp còn để ngỏ trong dàn ý:**
    - §3.2: approach to theory development đang ghi "ví dụ abductive", cần gọi tên theo quy trình thật;
    - §3.3.3: có dùng narrative inquiry hay không;
@@ -111,6 +111,15 @@ Tệp: `Appendix-A-Literature-search-and-matrix.docx` (soạn ngày 06/10/2026, 
 
 Nội dung chỉ lấy từ hồ sơ của nhóm: tệp keywords giai đoạn 1, ghi chú trong COB_12 và COB_10. Mọi chỗ thiếu dữ liệu được đánh dấu `[CẦN NHÓM BỔ SUNG: …]` và tô vàng. Không có con số hay chuỗi tìm kiếm nào được tự điền. Nhóm cần xóa hết các dấu này trước khi nộp và khai báo phần AI hỗ trợ trong AI USE DECLARATION.
 
-## 8. Metadata của papers chưa được kiểm tra
+## 8. Toàn văn 12 bài và đánh giá dàn ý
+
+Người dùng đã cung cấp toàn văn 12 bài trong `12_Research_Articles_Full_Text_Clean.md` (SHA-256 `9c3fb1b6…64214d7`). Tệp này không được lưu vào repo vì phần lớn các bài giữ bản quyền. Phần nội dung chính của cả 12 bài đã được đọc, bỏ qua danh mục tài liệu tham khảo.
+
+Bản đánh giá dàn ý COB_10 với tư cách một empirical study, kèm bảng thiết kế của 12 bài, nằm ở [`danh-gia-dan-y-COB_10.md`](danh-gia-dan-y-COB_10.md). Các phát hiện chính:
+- "social powerlessness" và định nghĩa career motivation theo direction–intensity–persistence không có nguồn trong bộ 12 bài;
+- relative deprivation và career insecurity cũng không có nguồn;
+- ghi chú trong COB_12 cho các bài 3, 6, 7, 9 và 12 cần sửa.
+
+## 9. Metadata của papers chưa được kiểm tra
 
 Chưa xác minh DOI, năm, tập và số trang của 12 papers vì mạng của môi trường chặn `doi.org` và `api.crossref.org`. Trước khi đưa vào References, cần kiểm tra lại từng mục theo APA 7.
