@@ -123,3 +123,12 @@ Bản đánh giá dàn ý COB_10 với tư cách một empirical study, kèm b�
 ## 9. Metadata của papers chưa được kiểm tra
 
 Chưa xác minh DOI, năm, tập và số trang của 12 papers vì mạng của môi trường chặn `doi.org` và `api.crossref.org`. Trước khi đưa vào References, cần kiểm tra lại từng mục theo APA 7.
+
+## 10. Nhật ký quyết định
+
+- **06/10/2026 — Bỏ mục §2.1 "Literature search and selection" khỏi dàn ý COB_10.** Lý do: người dùng quyết định theo tiêu chí "các bài báo khác có trình bày thì giữ, không thì bỏ". Toàn văn 12 bài không bài nào có đoạn mô tả cách tìm hay chọn tài liệu (đã tìm "Scopus", "Web of Science", "database", "search strategy", "search terms", "systematic review", "literature search"; không có kết quả liên quan). Việc cần làm theo:
+  1. Đánh số lại §2.2–2.7 thành §2.1–2.6 và sửa các tham chiếu chéo, ví dụ §1.2 trỏ tới "mục 2.5".
+  2. Khuyến nghị (nhóm chưa chốt): giữ Appendix A hoặc một câu dẫn ở đầu Chương 2 hay §1.5, để trả lời phê bình 5 của thầy về việc đã đọc bài thật.
+  3. Gap vẫn phải giới hạn theo tập nguồn đã rà soát. Không bắt chước câu "no study…" của Wang et al. hay "significant gap" của Qi & Huang.
+
+  Tệp Word gốc `goc/MRF_26_COB_10.docx` chưa được sửa.
