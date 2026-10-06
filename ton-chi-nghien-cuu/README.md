@@ -1,11 +1,15 @@
 # Ghi chú bộ quy tắc nghiên cứu
 
-Ghi chú ngày 06/10/2026 sau khi đọc toàn bộ năm tệp người dùng cung cấp. Tệp này là bản đồ đọc nhanh và nhật ký đối chiếu. Nội dung quy tắc đầy đủ nằm trong các tệp gốc liệt kê bên dưới. Khi cần chi tiết hoặc căn cứ, mở tệp gốc thay vì dựa vào bản tóm tắt này.
+Ghi chú ngày 06/10/2026 sau khi đọc toàn bộ các tệp người dùng cung cấp.
+
+> **Tôn chỉ làm việc chính:** [`tom-tat-day-du-toan-bo-bai-giang-phuong-phap-nghien-cuu.md`](tom-tat-day-du-toan-bo-bai-giang-phuong-phap-nghien-cuu.md). Người dùng yêu cầu mọi việc sau này phải tuân theo tôn chỉ này. Quy tắc vận hành rút gọn nằm trong [`../CLAUDE.md`](../CLAUDE.md), tệp mà Claude Code tự nạp vào mỗi phiên làm việc trong repo.
+ Tệp này là bản đồ đọc nhanh và nhật ký đối chiếu. Nội dung quy tắc đầy đủ nằm trong các tệp gốc liệt kê bên dưới. Khi cần chi tiết hoặc căn cứ, mở tệp gốc thay vì dựa vào bản tóm tắt này.
 
 ## 1. Thành phần bộ tài liệu
 
 | Tệp | Vai trò | Ghi chú kiểm tra |
 |---|---|---|
+| [`tom-tat-day-du-toan-bo-bai-giang-phuong-phap-nghien-cuu.md`](tom-tat-day-du-toan-bo-bai-giang-phuong-phap-nghien-cuu.md) | **Tôn chỉ chính.** Cẩm nang 28 mục và 3 phụ lục, hệ thống hóa 20 tệp nguồn (UEH Chương 1–7: 183 trang PDF và 48 slide; Saunders Lectures 1–11, 13, 14: 213 slide), phản hồi của giảng viên cho bài COB và quy tắc Scientific Writing của UNC. | Lưu nguyên văn, đã đọc toàn bộ 2.571 dòng. SHA-256 `0966005f…98ff4310`. Các tệp nguồn gốc của cẩm nang không có trong repo nên chưa kiểm tra trực tiếp được. |
 | [`ton-chi-phuong-phap-nghien-cuu.md`](ton-chi-phuong-phap-nghien-cuu.md) | **Bản điều phối.** Danh mục nguồn, vai trò từng nguồn, 23 nguyên tắc vận dụng và bảng tra chương Saunders/Ormrod. | Lưu nguyên văn. Có tham chiếu tới một số tệp chưa có trong repo (mục 6). |
 | [`ton-chi-quy-tac-nghien-cuu-chi-tiet.md`](ton-chi-quy-tac-nghien-cuu-chi-tiet.md) | **Bộ quy tắc vận hành.** 20 tôn chỉ, chuỗi logic, quy tắc theo chủ đề, 35 hard stop/red flag và các checklist. | Lưu nguyên văn. Là bản chuyển thể từ tệp Word. |
 | [`ton-chi-bo-slide-saunders-9-lecture.md`](ton-chi-bo-slide-saunders-9-lecture.md) | **Bản đồ xác nhận.** Cho biết nội dung nào đã được đối chiếu trực tiếp với 9 bộ slide Saunders (Lectures 1, 2, 3, 4, 6, 9, 10, 13, 14). | Lưu nguyên văn. Chín tệp PowerPoint gốc không có trong đợt tải lên này nên chưa thể kiểm tra lại hash. |
@@ -17,9 +21,9 @@ Ghi chú ngày 06/10/2026 sau khi đọc toàn bộ năm tệp người dùng cu
 
 1. Yêu cầu hiện tại của người dùng và giảng viên.
 2. Syllabus/rubric đang áp dụng (UEH MAN502123).
-3. Bằng chứng và tiêu chuẩn phương pháp phù hợp với thiết kế.
+3. Tôn chỉ chính (cẩm nang), gồm các điểm hiệu chỉnh ở mục 25 của cẩm nang.
 4. Giáo trình gốc: Saunders, Lewis & Thornhill (2023, ấn bản 9); Ormrod (2023, ấn bản 13 Global).
-5. Checklist trong bộ tôn chỉ. Checklist là công cụ kiểm tra, không thay lập luận phương pháp.
+5. Các tệp bổ trợ và checklist trong bộ tôn chỉ. Checklist là công cụ kiểm tra, không thay lập luận phương pháp.
 
 Ví dụ, bài tập, con số và lời dặn sinh viên trong nguồn **không** tự động thành yêu cầu cho mọi bài.
 
@@ -120,11 +124,11 @@ Các mục dưới đây không phải lỗi nghiêm trọng, nhưng cần nhớ
    Khi cần các chi tiết này, mở bản Word.
 4. **Đánh số danh sách trong bản Word bị lệch.** Ba cổng secondary data đánh số 6–8 và quy trình quyết định nhanh đánh số 9–20 do danh sách nối tiếp. Đây chỉ là lỗi định dạng.
 5. **Số trang.** Bản md ghi 26 trang. Khi render bằng LibreOffice ra 27 trang, nhiều khả năng do khác font. Nội dung không đổi.
-6. **Lectures 5, 7, 8, 11 chưa đối chiếu với slide gốc.** Chỉ dựa vào bản Word; cần kiểm tra giáo trình khi phán đoán chi tiết.
+6. **Lectures 5, 7, 8, 11.** Bản md chi tiết ghi là chưa đối chiếu với slide gốc. Cẩm nang ghi đã rà soát cả bốn lecture này (21, 16, 7 và 28 slide, khớp số slide trong bản Word) và bổ sung chi tiết. Ví dụ: ba mức access (physical, cognitive, continuing); quy ước phân loại phản hồi (refusal, break-off dưới khoảng 50%, partial khoảng 50–80%, complete trên khoảng 80%); các cấu trúc mixed methods; tiêu chí authenticity. Khi cần phán đoán chi tiết, ưu tiên cẩm nang, rồi đến giáo trình.
 
 ## 8. Tệp được tham chiếu nhưng chưa có trong repo
 
-Bản điều phối liên kết tới các tệp sau. Chúng chưa được cung cấp nên liên kết sẽ hỏng cho đến khi bổ sung:
+Nội dung của bộ bài giảng UEH 7 chương, phản hồi của thầy cho bài COB và quy tắc văn phong khoa học hiện đã nằm trong cẩm nang (mục 2–8 và mục 28). Tuy vậy, bản điều phối vẫn liên kết tới các tệp riêng sau. Chúng chưa được cung cấp nên các liên kết này vẫn hỏng:
 
 - `ton-chi-bai-giang-7-chuong.md` và `research-methods-sources/ueh-lecture-set/` (bộ bài giảng UEH 7 chương)
 - `phan-hoi-cua-thay-cho-bai-COB.md` (phản hồi của giảng viên cho bài COB)
@@ -135,3 +139,10 @@ Bản điều phối liên kết tới các tệp sau. Chúng chưa được cun
 - `research-methods-sources/saunders-lecture-set/` (9 bộ slide Saunders)
 
 `quy-tac-short-note.md` đã được tạo trong đợt này.
+
+## 9. Khác biệt đáng chú ý giữa cẩm nang và các tệp trước
+
+- **Quy định AI của syllabus** chỉ có trong `ton-chi-phuong-phap-nghien-cuu.md`, cẩm nang không nhắc lại. Quy định này vẫn có hiệu lực và đã được đưa vào `CLAUDE.md`.
+- **Cách phân loại interview mode.** Cẩm nang dùng individual/group, còn bản md đối chiếu slide dùng one-to-one, one-to-many, two-to-many. Hai cách không mâu thuẫn; cách sau chi tiết hơn.
+- **Mức chi tiết phiên âm.** Cẩm nang (§20.2) nói không cần ghi mọi pause hay ngữ điệu nếu RQ chỉ cần nội dung chủ đề. Tệp chi tiết nhấn mạnh không rút gọn transcript nếu làm mất bằng chứng liên quan. Hai ý nhất quán: mức phiên âm theo mục đích phân tích, và phải ghi rõ quy ước.
+- **Ví dụ trong mục 28.5–28.6 của cẩm nang** dùng chính chủ đề COB (young early-career workers ở TP.HCM, social powerlessness, "lying flat"). Đây là ví dụ minh họa của nguồn, không phải RQ hay câu hỏi phỏng vấn đã được duyệt cho bài nộp.

@@ -1,3 +1,4 @@
 # NCKH
 
-- [Bộ tôn chỉ và quy tắc nghiên cứu](ton-chi-nghien-cuu/README.md): ghi chú tổng hợp, quy tắc vận hành và nguồn gốc.
+- [Tôn chỉ làm việc](CLAUDE.md): mọi công việc trong repo tuân theo [cẩm nang phương pháp nghiên cứu](ton-chi-nghien-cuu/tom-tat-day-du-toan-bo-bai-giang-phuong-phap-nghien-cuu.md).
+- [Ghi chú bộ tôn chỉ và quy tắc](ton-chi-nghien-cuu/README.md): vai trò từng tệp, thứ tự ưu tiên và các điểm đối chiếu.
