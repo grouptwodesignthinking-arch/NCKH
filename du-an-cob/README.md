@@ -77,6 +77,25 @@ Mình chỉ ghi nhận các điểm dưới đây, không tự sửa. Quyết đ
 8. **Trạng thái đọc 12 papers.** Thầy yêu cầu tách collected, screened, full-text read và used (cẩm nang §28.1, phê bình 5). COB_12 chưa ghi bài nào đã đọc toàn văn. Gợi ý thêm cột trạng thái vào literature matrix ở Appendix A.
 9. **"Q5 trong guide"** (Gray et al., COB_12): interview guide chưa có trong repo nên chưa đối chiếu được.
 
-## 6. Metadata của papers chưa được kiểm tra
+## 6. Hồ sơ tìm kiếm giai đoạn 1 (`COB-KEYWORDS-PAPER-RESEARCH`)
+
+Tệp: [`COB-keywords-tim-kiem-giai-doan-1.md`](COB-keywords-tim-kiem-giai-doan-1.md), bản gốc `goc/COB-KEYWORDS-PAPER-RESEARCH.docx`. Tệp tạo ngày 27/08/2026, người sửa cuối "Trà Nguyễn Song", SHA-256 `2e9532ef…48aab`.
+
+**Nội dung:** đề tài ở giai đoạn đầu ("Tang Ping among Chinese Youth"); bảng khối từ khóa broad → refined; 5 chuỗi tìm kiếm S1–S5; bộ lọc (2022–2026, bài báo tiếng Anh); 6 bài đã đánh giá, trong đó Hsu (2022) và Qi & Huang (2026) được chọn; lý do chọn hai bài này; hướng dẫn nộp LMS của bài tập trước đó.
+
+Tệp này là **bằng chứng cho giai đoạn 1** của quá trình tìm tài liệu, dùng được cho §2.1 và Appendix A. Nhưng nó **chưa đủ** để mô tả cách nhóm có bộ 12 papers hiện tại:
+
+1. **Đề tài đã đổi.** Giai đoạn 1 tìm về sinh viên và giới trẻ Trung Quốc, cách xã hội đánh giá việc nằm thẳng. Đề tài hiện tại là người trẻ mới đi làm ở TP.HCM, cảm giác bất lực và động lực nghề nghiệp. Bộ từ khóa chưa có khối về career motivation, career control, powerlessness, quiet quitting hay người lao động.
+2. **Chỉ có 2/12 bài của COB_12.** Mười bài còn lại không có trong hồ sơ này:
+   - Gray et al. và Wang et al. (quiet quitting), Grabarski et al. (career control) không thể tìm ra bằng S1–S5, vì chuỗi nào cũng bắt buộc có "Tang Ping"/"lying flat";
+   - Keyser-Verreault (Đài Loan) có thể bị S1 loại vì điều kiện China/Chinese.
+
+   Cần hồ sơ của vòng tìm sau, hoặc ghi chép snowballing.
+3. **Bốn bài của Lu et al.** đã được đánh giá ("background/method", "strong/relevant alternative") nhưng không có trong COB_12. Khi báo cáo, chúng thuộc nhóm đã sàng lọc nhưng không dùng, và cần nêu lý do thật.
+4. **Database ghi là "Recommended",** chưa phải bản ghi những gì đã tìm thật. Hồ sơ cũng chưa có ngày tìm và số kết quả của từng chuỗi.
+5. **Lý do chọn Hsu và Qi & Huang** được viết cho câu hỏi cũ (vì sao nằm thẳng xuất hiện, và khi nào được xã hội chấp nhận). Trong bài hiện tại, hai bài này là anchor để định hướng phỏng vấn, nên lý do cần được cập nhật (xem mục 5, điểm 6).
+6. **Mục "What to upload on LMS"** là yêu cầu của bài tập trước, không thuộc nội dung §2.1.
+
+## 7. Metadata của papers chưa được kiểm tra
 
 Chưa xác minh DOI, năm, tập và số trang của 12 papers vì mạng của môi trường chặn `doi.org` và `api.crossref.org`. Trước khi đưa vào References, cần kiểm tra lại từng mục theo APA 7.
