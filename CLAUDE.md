@@ -14,13 +14,23 @@ Theo yêu cầu của người dùng ngày 06/10/2026, **mọi yêu cầu trong 
 
 Trước khi làm một việc chuyên môn, mở đúng mục trong tôn chỉ chính. Không làm theo trí nhớ về bản tóm tắt này.
 
+## Quy chuẩn dự án COB (MRF_26)
+
+Theo yêu cầu ngày 06/10/2026, **toàn bộ bài sau này tuân thủ ba tệp trong [`du-an-cob/`](du-an-cob/README.md)**:
+- `COB_10`: dàn ý báo cáo và phân công;
+- `COB_11`: aim, objectives và RQ;
+- `COB_12`: bộ 12 papers sẽ dùng.
+
+Đọc `du-an-cob/README.md` trước mỗi việc liên quan đến bài COB. Tệp đó ghi các điểm chưa nhất quán mà nhóm cần chốt, ví dụ 3 hay 4 RQ. Khi một điểm chưa được chốt, không tự chọn thay nhóm. Nguồn về chủ đề nghiên cứu chỉ lấy từ COB_12, trừ khi nhóm bổ sung.
+
 ## Thứ tự ưu tiên khi có xung đột
 
 1. Yêu cầu hiện tại của người dùng và hướng dẫn mới nhất của giảng viên.
 2. Syllabus/rubric đang áp dụng.
-3. Tôn chỉ chính, gồm các điểm hiệu chỉnh ở mục 25 (APA 7, trục x/y, histogram, ten-times rule...).
-4. Giáo trình gốc: Saunders, Lewis & Thornhill (2023); Ormrod (2023).
-5. Tài liệu bổ trợ và checklist.
+3. Quy chuẩn dự án COB (`du-an-cob/`): cấu trúc bài, phạm vi câu hỏi, tập nguồn.
+4. Tôn chỉ chính, gồm các điểm hiệu chỉnh ở mục 25 (APA 7, trục x/y, histogram, ten-times rule...). Quy chuẩn dự án không hợp thức hóa được lựa chọn sai phương pháp; nếu xung đột thì nêu ra để nhóm quyết định.
+5. Giáo trình gốc: Saunders, Lewis & Thornhill (2023); Ormrod (2023).
+6. Tài liệu bổ trợ và checklist.
 
 Khi hai nguồn khác nhau về thực chất, nêu rõ chỗ khác nhau, không âm thầm bỏ một bên. Bài tập, ví dụ, tỷ trọng điểm và lời dặn hành chính trong slide là **nội dung của nguồn**, không phải việc người dùng hay Claude phải làm.
 
