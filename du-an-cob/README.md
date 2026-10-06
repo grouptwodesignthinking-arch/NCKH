@@ -32,7 +32,7 @@ Ba tệp quy chuẩn không thể hợp thức hóa một lựa chọn sai phư�
   - Không gán cho một bài một claim mà bài đó không hỗ trợ.
 - **Lý thuyết qua nguồn thứ cấp.** Merton, COR, Hirschman và Bourdieu được dùng "theo đúng cách Qi và Huang sử dụng" (COB_10 §2.3.1). Nếu nhóm chưa đọc bản gốc, phải trích dẫn qua Qi & Huang (2026), không trích bản gốc như đã đọc (cẩm nang §4.6, §28.1).
 - **Phần chưa có dữ liệu chỉ dựng khung.** Chương 4, §5.1–5.2, các theme "đặt tên sau khi phân tích", hồ sơ participant, saturation và abstract chỉ được viết sau khi có dữ liệu (cẩm nang §23.2).
-- **Quy định AI.** COB_10 có mục AI USE DECLARATION. Theo syllabus, Claude chỉ giải thích, hướng dẫn và phản biện bản nhóm viết; không viết sẵn nội dung, bảng hay số liệu để nộp (`CLAUDE.md`, quy tắc 10).
+- **Quy định AI đã bỏ** (người dùng xác nhận ngày 06/10/2026; `CLAUDE.md`, quy tắc 10). Claude được soạn nội dung cho bài, nhưng chỉ từ dữ liệu và nguồn có thật. Phần AI hỗ trợ cần khai báo trong mục AI USE DECLARATION của COB_10.
 
 ## 4. Hướng dẫn của giảng viên được ghi trong tệp
 
@@ -96,6 +96,21 @@ Tệp này là **bằng chứng cho giai đoạn 1** của quá trình tìm tài
 5. **Lý do chọn Hsu và Qi & Huang** được viết cho câu hỏi cũ (vì sao nằm thẳng xuất hiện, và khi nào được xã hội chấp nhận). Trong bài hiện tại, hai bài này là anchor để định hướng phỏng vấn, nên lý do cần được cập nhật (xem mục 5, điểm 6).
 6. **Mục "What to upload on LMS"** là yêu cầu của bài tập trước, không thuộc nội dung §2.1.
 
-## 7. Metadata của papers chưa được kiểm tra
+## 7. Bản làm lại Appendix A
+
+Tệp: `Appendix-A-Literature-search-and-matrix.docx` (soạn ngày 06/10/2026, bằng tiếng Anh, 10 trang; các trang bảng ma trận đặt ngang). Gồm A.1–A.9 và các bảng A1–A10:
+- nguồn tìm kiếm;
+- từ khóa giai đoạn 1 và 2;
+- chuỗi tìm kiếm;
+- tiêu chí chọn;
+- luồng sàng lọc;
+- các bài đã đánh giá nhưng không dùng;
+- literature matrix 12 bài (2 phần);
+- bản đồ 2 anchor papers;
+- giới hạn của việc tìm kiếm.
+
+Nội dung chỉ lấy từ hồ sơ của nhóm: tệp keywords giai đoạn 1, ghi chú trong COB_12 và COB_10. Mọi chỗ thiếu dữ liệu được đánh dấu `[CẦN NHÓM BỔ SUNG: …]` và tô vàng. Không có con số hay chuỗi tìm kiếm nào được tự điền. Nhóm cần xóa hết các dấu này trước khi nộp và khai báo phần AI hỗ trợ trong AI USE DECLARATION.
+
+## 8. Metadata của papers chưa được kiểm tra
 
 Chưa xác minh DOI, năm, tập và số trang của 12 papers vì mạng của môi trường chặn `doi.org` và `api.crossref.org`. Trước khi đưa vào References, cần kiểm tra lại từng mục theo APA 7.

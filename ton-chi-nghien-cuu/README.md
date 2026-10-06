@@ -101,7 +101,7 @@ Truy vết bắt buộc: `RQ → dữ liệu cần có → thu thập → phân 
 
 ## 6. Quy tắc riêng cho cách mình hỗ trợ người dùng
 
-- **Quy định AI của học phần.** Syllabus ghi dự án cuối kỳ "KHÔNG ĐƯỢC dùng AI để tạo bất kỳ nội dung, bảng biểu, số liệu nào". Với dự án chịu quy định này, mình giải thích phương pháp, hướng dẫn tự làm và phản biện bản người dùng viết. Mình không viết sẵn nội dung để nộp và không hỗ trợ né công cụ phát hiện AI/Turnitin. Quy định này không mở rộng thành lệnh cấm cho các việc khác.
+- **Quy định AI của học phần (đã bỏ ngày 06/10/2026 theo xác nhận của người dùng; xem `CLAUDE.md`, quy tắc 10).** Syllabus cũ ghi dự án cuối kỳ "KHÔNG ĐƯỢC dùng AI để tạo bất kỳ nội dung, bảng biểu, số liệu nào". Với dự án chịu quy định này, mình giải thích phương pháp, hướng dẫn tự làm và phản biện bản người dùng viết. Mình không viết sẵn nội dung để nộp và không hỗ trợ né công cụ phát hiện AI/Turnitin. Quy định này không mở rộng thành lệnh cấm cho các việc khác.
 - **Trung thực.** Không bịa dữ liệu, người tham gia, trích dẫn hay số trang. Không nói đã đọc nguồn khi chưa đọc. Số trang phải kiểm tra trên nguồn: Saunders có trang PDF = trang in + 27, Ormrod có trang PDF = trang in + 1 (chỉ đúng ở các phần đã kiểm tra).
 - **Bài COB.** Mọi thuật ngữ và nhận định phải có nguồn. Văn phong thận trọng, không vòng vo kiểu AI. Trước khi thiết kế phỏng vấn, nêu rõ literature chưa trả lời điều gì và vì sao chọn nhóm người đó. Lập literature matrix và chọn khoảng hai anchor paper.
 - **Chưa đủ căn cứ thì mở giáo trình.** Nếu slide chỉ nêu tên quy trình mà không có procedure, không suy diễn.
@@ -142,7 +142,7 @@ Nội dung của bộ bài giảng UEH 7 chương, phản hồi của thầy cho
 
 ## 9. Khác biệt đáng chú ý giữa cẩm nang và các tệp trước
 
-- **Quy định AI của syllabus** chỉ có trong `ton-chi-phuong-phap-nghien-cuu.md`, cẩm nang không nhắc lại. Quy định này vẫn có hiệu lực và đã được đưa vào `CLAUDE.md`.
+- **Quy định AI của syllabus** chỉ có trong `ton-chi-phuong-phap-nghien-cuu.md`, cẩm nang không nhắc lại. Ngày 06/10/2026, người dùng xác nhận phiên bản sau không còn quy định này, nên nó không còn áp dụng (`CLAUDE.md`, quy tắc 10).
 - **Cách phân loại interview mode.** Cẩm nang dùng individual/group, còn bản md đối chiếu slide dùng one-to-one, one-to-many, two-to-many. Hai cách không mâu thuẫn; cách sau chi tiết hơn.
 - **Mức chi tiết phiên âm.** Cẩm nang (§20.2) nói không cần ghi mọi pause hay ngữ điệu nếu RQ chỉ cần nội dung chủ đề. Tệp chi tiết nhấn mạnh không rút gọn transcript nếu làm mất bằng chứng liên quan. Hai ý nhất quán: mức phiên âm theo mục đích phân tích, và phải ghi rõ quy ước.
 - **Ví dụ trong mục 28.5–28.6 của cẩm nang** dùng chính chủ đề COB (young early-career workers ở TP.HCM, social powerlessness, "lying flat"). Đây là ví dụ minh họa của nguồn, không phải RQ hay câu hỏi phỏng vấn đã được duyệt cho bài nộp.

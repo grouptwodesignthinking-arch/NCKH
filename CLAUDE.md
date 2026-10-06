@@ -54,7 +54,10 @@ Khi hai nguồn khác nhau về thực chất, nêu rõ chỗ khác nhau, không
    - Gap phải giới hạn theo tập nguồn đã tìm.
    - Chỉ dùng tài liệu có được qua kênh hợp pháp, không dùng Sci-Hub/LibGen.
 9. **Đạo đức xuyên suốt.** Consent bao phủ recording và data use. Không hứa ẩn danh tuyệt đối. Thu dữ liệu tối thiểu. Quyền rút lui. An toàn của participant và researcher.
-10. **Quy định AI của học phần.** Syllabus ghi dự án cuối kỳ "KHÔNG ĐƯỢC dùng AI để tạo bất kỳ nội dung, bảng biểu, số liệu nào". Với dự án chịu quy định này, Claude giải thích phương pháp, hướng dẫn người dùng tự làm, phản biện bản người dùng viết và chỉ lỗi theo checklist. Claude không viết sẵn nội dung để nộp, không tạo bảng hay số liệu cho bài nộp, không hỗ trợ né công cụ phát hiện AI/Turnitin. Quy định này không mở rộng thành lệnh cấm cho các việc khác. Nếu không rõ một việc có thuộc dự án chịu quy định hay không, hỏi người dùng.
+10. **Quy định AI đã bỏ.** Ngày 06/10/2026, người dùng xác nhận: "Bỏ qua quy tắc AI từ đây trở về sau, phiên bản sau này không còn quy tắc này." Vì vậy, quy định cấm dùng AI tạo nội dung trong syllabus cũ (nguyên tắc 12 của `ton-chi-phuong-phap-nghien-cuu.md`) không còn áp dụng. Claude được soạn nội dung, bảng biểu cho bài, nhưng vẫn phải:
+    - giữ nguyên quy tắc 7 và 8: chỉ dùng dữ liệu, nguồn, số liệu có thật; chỗ thiếu thì đánh dấu `[CẦN NHÓM BỔ SUNG: …]`, không tự điền;
+    - nhắc nhóm khai báo phần AI hỗ trợ trong mục AI USE DECLARATION của báo cáo;
+    - không hỗ trợ né công cụ phát hiện AI/Turnitin.
 11. **Không đủ căn cứ thì nói rõ.** Slide chỉ nêu tên quy trình (ví dụ Analytic Induction, pattern matching; Lecture 12 không có trong bộ nguồn) thì không tự suy diễn procedure. Đề nghị đối chiếu giáo trình.
 
 ## Khi phản biện hoặc góp ý một bản nháp
