@@ -1,5 +1,8 @@
 # Củ Chi Stories: chuyện kể dưới lòng đất
 
+> **Bản Heritage (web, dùng trên điện thoại):** https://grouptwodesignthinking-arch.github.io/NCKH/
+> Mã nguồn ở [`heritage/`](heritage/cuchi-stories/README.md), trang xuất bản ở [`docs/`](docs/). Trang in mã QR thử nghiệm: [`docs/ma-tram-CC01-CC06.png`](docs/ma-tram-CC01-CC06.png). Cách bật GitHub Pages: xem [Xuất bản bản Heritage](#xuất-bản-bản-heritage-github-pages) ở cuối trang.
+
 **Củ Chi Stories** là app trải nghiệm di sản theo lối kể chuyện, dành cho khách tham quan trẻ (Gen Z) tại Địa đạo Củ Chi. Người dùng không chỉ *đi xem* di tích mà khám phá từng địa điểm như đang bước vào một câu chuyện. Đi cùng câu chuyện là AR trên di tích thật, mô hình 3D, câu chuyện con người, lựa chọn tình huống và Hộ chiếu Ký ức.
 
 > *Do not just visit history — uncover it.*
@@ -112,3 +115,24 @@ scripts/crop_concept_images.py
 - Việc nhận biết “đã đến nơi” đang dùng nút *Tôi đã đến nơi*. Bản thật dùng GPS hoặc mã nhận diện tại điểm.
 - Thuyết minh dùng giọng đọc tổng hợp của thiết bị. Chất lượng giọng tiếng Việt tuỳ máy.
 - Tab *Tiện ích* có **Chế độ demo** để mở mọi địa điểm khi trình bày.
+
+## Xuất bản bản Heritage (GitHub Pages)
+
+Thư mục `docs/` chứa bản Heritage đóng gói thành một file (`docs/index.html`). GitHub Pages phục vụ qua HTTPS, nên trên điện thoại dùng được đủ chức năng, kể cả camera quét QR và AR bám mã trạm.
+
+Bật một lần (cần quyền admin của repo):
+
+1. Vào **Settings → Pages**.
+2. Ở **Build and deployment → Source**, chọn **Deploy from a branch**.
+3. Chọn nhánh chứa bản mới nhất (`main` sau khi merge PR, hoặc nhánh đang làm việc), thư mục **`/docs`**, rồi bấm **Save**.
+4. Sau khoảng 1–2 phút, trang có ở https://grouptwodesignthinking-arch.github.io/NCKH/
+
+Cập nhật trang sau khi sửa mã Heritage, chạy từ thư mục gốc repo:
+
+```bash
+python3 heritage/cuchi-stories/build.py
+cp heritage/Cu-Chi-Stories-Heritage.html docs/index.html
+```
+
+Sau đó commit và push lên nhánh mà Pages đang dùng.
+

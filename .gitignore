@@ -40,3 +40,7 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Heritage web app (heritage/cuchi-stories): local server data
+heritage/cuchi-stories/data/
+__pycache__/
