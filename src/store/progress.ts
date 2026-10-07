@@ -43,7 +43,7 @@ const initial: State = {
   demoUnlockAll: false,
 };
 
-const addUnique = <T,>(list: T[], v: T) => (list.includes(v) ? list : [...list, v]);
+const addUnique = <T>(list: T[], v: T) => (list.includes(v) ? list : [...list, v]);
 
 export const useProgress = create<State & Actions>()(
   persist(

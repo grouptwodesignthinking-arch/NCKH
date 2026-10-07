@@ -28,9 +28,7 @@ const concept: L = {
 const m = (source: ImageSourcePropType): Media => ({ source, kind: 'reconstruction', credit: concept });
 
 export const media = {
-  welcomeEntrance: m(require('../../assets/images/welcome-entrance.jpg')),
   heroTunnel: m(require('../../assets/images/hero-tunnel.jpg')),
-  heroForest: m(require('../../assets/images/hero-forest.jpg')),
 
   siteHatch: m(require('../../assets/images/site-hatch.jpg')),
   siteKitchen: m(require('../../assets/images/site-kitchen.jpg')),
@@ -39,7 +37,6 @@ export const media = {
   siteMeeting: m(require('../../assets/images/site-meeting.jpg')),
   siteMedical: m(require('../../assets/images/site-medical.jpg')),
   siteBomb: m(require('../../assets/images/site-bomb.jpg')),
-  siteForest: m(require('../../assets/images/site-forest.jpg')),
 
   companionCook: m(require('../../assets/images/companion-cook.jpg')),
   companionLiaison: m(require('../../assets/images/companion-liaison.jpg')),
@@ -50,16 +47,12 @@ export const media = {
   storyWitness: m(require('../../assets/images/story-witness.jpg')),
 
   arLeaves: m(require('../../assets/images/ar-leaves.jpg')),
-  arHatchReal: m(require('../../assets/images/ar-hatch-real.jpg')),
-  arKitchenReal: m(require('../../assets/images/ar-kitchen-real.jpg')),
+  arHatchOpen: m(require('../../assets/images/ar-hatch-real.jpg')),
+  arKitchenStove: m(require('../../assets/images/ar-kitchen-real.jpg')),
   arKitchenGhost: m(require('../../assets/images/ar-kitchen-ghost.jpg')),
   arMeetingGhost: m(require('../../assets/images/ar-meeting-ghost.jpg')),
-  arOverlayGhost: m(require('../../assets/images/ar-overlay-ghost.jpg')),
-  arTrapReal: m(require('../../assets/images/ar-trap-real.jpg')),
 
-  tunnelCutaway: m(require('../../assets/images/tunnel-cutaway.jpg')),
   vrInterior: m(require('../../assets/images/vr-interior.jpg')),
-  vrMeeting: m(require('../../assets/images/vr-meeting.jpg')),
   vrPano: m(require('../../assets/images/vr-pano.jpg')),
 } satisfies Record<string, Media>;
 

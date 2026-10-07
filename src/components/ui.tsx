@@ -1,22 +1,11 @@
 import { router } from 'expo-router';
 import type { ReactNode } from 'react';
-import {
-  Image,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-  type ImageStyle,
-  type StyleProp,
-  type TextStyle,
-  type ViewStyle,
-} from 'react-native';
+import { Image, Pressable, ScrollView, StyleSheet, Text, View, type ImageStyle, type StyleProp, type TextStyle, type ViewStyle } from 'react-native';
 import { SafeAreaView, type Edge } from 'react-native-safe-area-context';
 import { useT } from '../i18n';
 import { media, type MediaKey } from '../data/media';
 import { useProgress } from '../store/progress';
-import { colors, fonts, radius, shadow } from '../theme';
+import { colors, fonts, radius, shadow, fill } from '../theme';
 import { Icon, type IconName } from './Icon';
 
 export function Screen({
@@ -132,7 +121,7 @@ export function Photo({
   const m = media[k];
   return (
     <View style={[{ overflow: 'hidden' }, style as StyleProp<ViewStyle>]}>
-      <Image source={m.source} style={StyleSheet.absoluteFill} resizeMode={resizeMode} />
+      <Image source={m.source} style={fill} resizeMode={resizeMode} />
       {badge ? <MediaBadge k={k} style={badgePosition === 'top' ? { top: 6 } : { bottom: 6 }} /> : null}
     </View>
   );

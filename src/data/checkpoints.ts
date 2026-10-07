@@ -50,8 +50,8 @@ export const checkpoints: Checkpoint[] = [
     subtitle: { vi: 'Lối vào nằm ngay dưới lớp lá', en: 'An entrance hidden under the leaves' },
     image: 'siteHatch',
     arScene: 'arLeaves',
-    arGhost: 'arHatchReal',
-    pastPresent: { now: 'siteHatch', then: 'arHatchReal' },
+    arGhost: 'arHatchOpen',
+    pastPresent: { now: 'siteHatch', then: 'arHatchOpen' },
     map: { x: 22, y: 20 },
     distanceM: 0,
     walkMin: 0,
@@ -93,27 +93,57 @@ export const checkpoints: Checkpoint[] = [
         en: 'You need an entrance that someone could walk right past without noticing. What would you do?',
       },
       options: [
-        { id: 'a', text: { vi: 'Làm cửa lớn để vào ra cho nhanh', en: 'Make a big door to get in and out quickly' }, explain: { vi: 'Cửa lớn dễ bị phát hiện và dễ bị theo vào — người xưa chọn điều ngược lại.', en: 'A big door is easy to spot and easy to follow — people chose the opposite.' } },
-        { id: 'b', text: { vi: 'Làm nắp nhỏ, phủ đất và lá như mặt rừng', en: 'A small lid covered with soil and leaves' }, explain: { vi: 'Đúng là cách người Củ Chi đã làm: nắp nhỏ, ngụy trang kỹ, hòa vào thiên nhiên.', en: 'This is what people in Củ Chi did: a small, carefully camouflaged lid that blends into nature.' }, best: true },
-        { id: 'c', text: { vi: 'Đặt lính gác ngay cạnh cửa', en: 'Post a guard next to the door' }, explain: { vi: 'Người gác đứng một chỗ lại chính là dấu hiệu cho biết có lối vào.', en: 'A guard standing still is itself a sign that an entrance is there.' } },
+        {
+          id: 'a',
+          text: { vi: 'Làm cửa lớn để vào ra cho nhanh', en: 'Make a big door to get in and out quickly' },
+          explain: {
+            vi: 'Cửa lớn dễ bị phát hiện và dễ bị theo vào — người xưa chọn điều ngược lại.',
+            en: 'A big door is easy to spot and easy to follow — people chose the opposite.',
+          },
+        },
+        {
+          id: 'b',
+          text: { vi: 'Làm nắp nhỏ, phủ đất và lá như mặt rừng', en: 'A small lid covered with soil and leaves' },
+          explain: {
+            vi: 'Đúng là cách người Củ Chi đã làm: nắp nhỏ, ngụy trang kỹ, hòa vào thiên nhiên.',
+            en: 'This is what people in Củ Chi did: a small, carefully camouflaged lid that blends into nature.',
+          },
+          best: true,
+        },
+        {
+          id: 'c',
+          text: { vi: 'Đặt lính gác ngay cạnh cửa', en: 'Post a guard next to the door' },
+          explain: {
+            vi: 'Người gác đứng một chỗ lại chính là dấu hiệu cho biết có lối vào.',
+            en: 'A guard standing still is itself a sign that an entrance is there.',
+          },
+        },
       ],
     },
     reflect: {
-      question: { vi: 'Nếu đi ngang qua đây mà không có câu chuyện này, bạn có nhận ra lối vào không?', en: 'Without this story, would you have noticed the entrance?' },
+      question: {
+        vi: 'Nếu đi ngang qua đây mà không có câu chuyện này, bạn có nhận ra lối vào không?',
+        en: 'Without this story, would you have noticed the entrance?',
+      },
       quick: [
         { vi: 'Chắc chắn không', en: 'Definitely not' },
         { vi: 'Có lẽ là không', en: 'Probably not' },
         { vi: 'Tôi bất ngờ vì nó quá nhỏ', en: 'I’m surprised how small it is' },
       ],
     },
-    fragment: { title: { vi: 'Nắp hầm bí mật', en: 'Secret trapdoor' }, type: 'diagram', media: 'arHatchReal', caption: { vi: 'Sơ đồ nắp hầm ngụy trang', en: 'Diagram of a camouflaged trapdoor' } },
+    fragment: {
+      title: { vi: 'Nắp hầm bí mật', en: 'Secret trapdoor' },
+      type: 'diagram',
+      media: 'arHatchOpen',
+      caption: { vi: 'Sơ đồ nắp hầm ngụy trang', en: 'Diagram of a camouflaged trapdoor' },
+    },
   },
   {
     id: 'bep-hoang-cam',
     name: { vi: 'Bếp Hoàng Cầm', en: 'The Hoàng Cầm kitchen' },
     subtitle: { vi: 'Giữ lửa mà không lộ khói', en: 'Keeping the fire without showing smoke' },
     image: 'siteKitchen',
-    arScene: 'arKitchenReal',
+    arScene: 'arKitchenStove',
     arGhost: 'arKitchenGhost',
     pastPresent: { now: 'siteKitchen', then: 'archiveKitchen' },
     map: { x: 40, y: 34 },
@@ -157,10 +187,39 @@ export const checkpoints: Checkpoint[] = [
         en: 'It is 1967 and you live at the base. You must cook without letting smoke give away your position. What do you choose?',
       },
       options: [
-        { id: 'a', text: { vi: 'Nấu ngay dưới cửa hầm', en: 'Cook right under the hatch' }, explain: { vi: 'Khói sẽ bốc thẳng lên từ cửa hầm — chỉ dẫn đường cho đối phương.', en: 'Smoke would pour straight out of the hatch — a signpost for the enemy.' } },
-        { id: 'b', text: { vi: 'Dẫn khói qua hệ thống phân tán', en: 'Lead the smoke through a dispersal system' }, explain: { vi: 'Đây chính là bài toán người dưới lòng đất phải giải — và bếp Hoàng Cầm là lời giải.', en: 'This was exactly the problem people underground had to solve — and the Hoàng Cầm kitchen was the answer.' }, best: true },
-        { id: 'c', text: { vi: 'Nấu ngoài rừng', en: 'Cook out in the forest' }, explain: { vi: 'Lửa ngoài trời dễ bị trinh sát phát hiện, người nấu cũng phải phơi mình.', en: 'An open fire is easy to spot, and the cook is exposed too.' } },
-        { id: 'd', text: { vi: 'Chỉ nấu vào ban đêm', en: 'Only cook at night' }, explain: { vi: 'Ánh lửa ban đêm còn dễ thấy hơn. Người ta thường nấu lúc sương sớm để khói lẫn vào sương.', en: 'Firelight is even more visible at night. People often cooked at dawn so smoke mixed with the mist.' } },
+        {
+          id: 'a',
+          text: { vi: 'Nấu ngay dưới cửa hầm', en: 'Cook right under the hatch' },
+          explain: {
+            vi: 'Khói sẽ bốc thẳng lên từ cửa hầm — chỉ dẫn đường cho đối phương.',
+            en: 'Smoke would pour straight out of the hatch — a signpost for the enemy.',
+          },
+        },
+        {
+          id: 'b',
+          text: { vi: 'Dẫn khói qua hệ thống phân tán', en: 'Lead the smoke through a dispersal system' },
+          explain: {
+            vi: 'Đây chính là bài toán người dưới lòng đất phải giải — và bếp Hoàng Cầm là lời giải.',
+            en: 'This was exactly the problem people underground had to solve — and the Hoàng Cầm kitchen was the answer.',
+          },
+          best: true,
+        },
+        {
+          id: 'c',
+          text: { vi: 'Nấu ngoài rừng', en: 'Cook out in the forest' },
+          explain: {
+            vi: 'Lửa ngoài trời dễ bị trinh sát phát hiện, người nấu cũng phải phơi mình.',
+            en: 'An open fire is easy to spot, and the cook is exposed too.',
+          },
+        },
+        {
+          id: 'd',
+          text: { vi: 'Chỉ nấu vào ban đêm', en: 'Only cook at night' },
+          explain: {
+            vi: 'Ánh lửa ban đêm còn dễ thấy hơn. Người ta thường nấu lúc sương sớm để khói lẫn vào sương.',
+            en: 'Firelight is even more visible at night. People often cooked at dawn so smoke mixed with the mist.',
+          },
+        },
       ],
     },
     reflect: {
@@ -171,7 +230,12 @@ export const checkpoints: Checkpoint[] = [
         { vi: 'Họ vẫn giữ được nếp sinh hoạt', en: 'They kept everyday life going' },
       ],
     },
-    fragment: { title: { vi: 'Bếp Hoàng Cầm', en: 'Hoàng Cầm kitchen' }, type: 'photo', media: 'archiveKitchen', caption: { vi: 'Bữa cơm dưới lòng đất (tái hiện)', en: 'A meal underground (reconstruction)' } },
+    fragment: {
+      title: { vi: 'Bếp Hoàng Cầm', en: 'Hoàng Cầm kitchen' },
+      type: 'photo',
+      media: 'archiveKitchen',
+      caption: { vi: 'Bữa cơm dưới lòng đất (tái hiện)', en: 'A meal underground (reconstruction)' },
+    },
   },
   {
     id: 'ham-hoi-hop',
@@ -215,9 +279,28 @@ export const checkpoints: Checkpoint[] = [
         en: 'A noise above interrupts the meeting. What keeps everyone safest?',
       },
       options: [
-        { id: 'a', text: { vi: 'Tất cả chạy ra cùng một cửa', en: 'Everyone runs out the same exit' }, explain: { vi: 'Một lối duy nhất dễ bị chặn. Vì vậy hầm có nhiều lối thoát.', en: 'A single exit is easy to block. That is why chambers had several.' } },
-        { id: 'b', text: { vi: 'Tản ra theo nhiều lối thoát đã chuẩn bị', en: 'Split up through the prepared exits' }, explain: { vi: 'Nhiều lối thoát và sự chuẩn bị trước giúp người trong hầm rời đi an toàn.', en: 'Several exits and preparation let people leave safely.' }, best: true },
-        { id: 'c', text: { vi: 'Thắp thêm đèn để nhìn rõ', en: 'Light more lamps to see better' }, explain: { vi: 'Thêm lửa nghĩa là thêm khói và tốn không khí trong hầm kín.', en: 'More flame means more smoke and less air in a closed chamber.' } },
+        {
+          id: 'a',
+          text: { vi: 'Tất cả chạy ra cùng một cửa', en: 'Everyone runs out the same exit' },
+          explain: {
+            vi: 'Một lối duy nhất dễ bị chặn. Vì vậy hầm có nhiều lối thoát.',
+            en: 'A single exit is easy to block. That is why chambers had several.',
+          },
+        },
+        {
+          id: 'b',
+          text: { vi: 'Tản ra theo nhiều lối thoát đã chuẩn bị', en: 'Split up through the prepared exits' },
+          explain: {
+            vi: 'Nhiều lối thoát và sự chuẩn bị trước giúp người trong hầm rời đi an toàn.',
+            en: 'Several exits and preparation let people leave safely.',
+          },
+          best: true,
+        },
+        {
+          id: 'c',
+          text: { vi: 'Thắp thêm đèn để nhìn rõ', en: 'Light more lamps to see better' },
+          explain: { vi: 'Thêm lửa nghĩa là thêm khói và tốn không khí trong hầm kín.', en: 'More flame means more smoke and less air in a closed chamber.' },
+        },
       ],
     },
     reflect: {
@@ -228,7 +311,12 @@ export const checkpoints: Checkpoint[] = [
         { vi: 'Tôi khâm phục sự bình tĩnh của họ', en: 'I admire their calm' },
       ],
     },
-    fragment: { title: { vi: 'Hầm hội họp', en: 'Meeting chamber' }, type: 'sketch', media: 'arMeetingGhost', caption: { vi: 'Phác hoạ cuộc họp dưới lòng đất', en: 'Sketch of an underground meeting' } },
+    fragment: {
+      title: { vi: 'Hầm hội họp', en: 'Meeting chamber' },
+      type: 'sketch',
+      media: 'arMeetingGhost',
+      caption: { vi: 'Phác hoạ cuộc họp dưới lòng đất', en: 'Sketch of an underground meeting' },
+    },
   },
   {
     id: 'lo-thong-hoi',
@@ -267,20 +355,41 @@ export const checkpoints: Checkpoint[] = [
     interact: {
       prompt: { vi: 'Bạn sẽ ngụy trang lỗ thông hơi như thế nào để không ai nghi ngờ?', en: 'How would you disguise an air vent so no one suspects it?' },
       options: [
-        { id: 'a', text: { vi: 'Đục một lỗ tròn thẳng đứng', en: 'Dig a straight vertical hole' }, explain: { vi: 'Lỗ thẳng dễ nhìn thấu và mưa sẽ chảy thẳng vào hầm.', en: 'A straight hole is easy to see into and lets rain pour in.' } },
-        { id: 'b', text: { vi: 'Giấu trong ụ mối, ống dẫn chạy xiên', en: 'Hide it in a termite mound, angled shaft' }, explain: { vi: 'Đúng vậy — thiên nhiên trở thành lớp ngụy trang tốt nhất.', en: 'Yes — nature became the best camouflage.' }, best: true },
-        { id: 'c', text: { vi: 'Không cần thông hơi', en: 'No vent needed' }, explain: { vi: 'Không có thông hơi, không khí trong hầm sẽ nhanh chóng cạn kiệt.', en: 'Without vents the air underground would quickly run out.' } },
+        {
+          id: 'a',
+          text: { vi: 'Đục một lỗ tròn thẳng đứng', en: 'Dig a straight vertical hole' },
+          explain: { vi: 'Lỗ thẳng dễ nhìn thấu và mưa sẽ chảy thẳng vào hầm.', en: 'A straight hole is easy to see into and lets rain pour in.' },
+        },
+        {
+          id: 'b',
+          text: { vi: 'Giấu trong ụ mối, ống dẫn chạy xiên', en: 'Hide it in a termite mound, angled shaft' },
+          explain: { vi: 'Đúng vậy — thiên nhiên trở thành lớp ngụy trang tốt nhất.', en: 'Yes — nature became the best camouflage.' },
+          best: true,
+        },
+        {
+          id: 'c',
+          text: { vi: 'Không cần thông hơi', en: 'No vent needed' },
+          explain: { vi: 'Không có thông hơi, không khí trong hầm sẽ nhanh chóng cạn kiệt.', en: 'Without vents the air underground would quickly run out.' },
+        },
       ],
     },
     reflect: {
-      question: { vi: 'Bạn nghĩ mình sẽ bỏ lỡ điều gì nếu chỉ nhìn thấy ụ mối này mà không nghe câu chuyện?', en: 'What would you miss if you saw this mound without hearing its story?' },
+      question: {
+        vi: 'Bạn nghĩ mình sẽ bỏ lỡ điều gì nếu chỉ nhìn thấy ụ mối này mà không nghe câu chuyện?',
+        en: 'What would you miss if you saw this mound without hearing its story?',
+      },
       quick: [
         { vi: 'Sự tinh tế của người xưa', en: 'How clever people were' },
         { vi: 'Rằng mỗi hơi thở đều quý', en: 'That every breath was precious' },
         { vi: 'Tôi sẽ nghĩ đó chỉ là ụ mối', en: 'I’d think it was just a mound' },
       ],
     },
-    fragment: { title: { vi: 'Lỗ thông hơi', en: 'Air vent' }, type: 'diagram', media: 'siteTermite', caption: { vi: 'Ụ mối ngụy trang hệ thống thông gió', en: 'A termite mound hiding the ventilation' } },
+    fragment: {
+      title: { vi: 'Lỗ thông hơi', en: 'Air vent' },
+      type: 'diagram',
+      media: 'siteTermite',
+      caption: { vi: 'Ụ mối ngụy trang hệ thống thông gió', en: 'A termite mound hiding the ventilation' },
+    },
   },
   {
     id: 'gieng-nuoc',
@@ -295,7 +404,10 @@ export const checkpoints: Checkpoint[] = [
     accessibility: { vi: 'Có rào chắn an toàn, phù hợp trẻ em', en: 'Safety railing, child friendly' },
     underground: true,
     zone: 'well',
-    hook: { vi: 'Sống dưới đất nhiều ngày, nước lấy từ đâu khi không thể lên mặt đất?', en: 'Living underground for days — where does water come from when you can’t go up?' },
+    hook: {
+      vi: 'Sống dưới đất nhiều ngày, nước lấy từ đâu khi không thể lên mặt đất?',
+      en: 'Living underground for days — where does water come from when you can’t go up?',
+    },
     arLayers: [
       { label: { vi: 'Miệng giếng', en: 'The well mouth' }, shape: 'outline' },
       { label: { vi: 'Giếng nối thẳng vào địa đạo', en: 'The well connects to the tunnel' }, shape: 'path' },
@@ -315,20 +427,50 @@ export const checkpoints: Checkpoint[] = [
     interact: {
       prompt: { vi: 'Nước khan hiếm. Bạn ưu tiên dùng cho ai trước?', en: 'Water is scarce. Who gets it first?' },
       options: [
-        { id: 'a', text: { vi: 'Người bị thương', en: 'The wounded' }, explain: { vi: 'Sự sẻ chia và ưu tiên người yếu là điều giữ cộng đồng dưới lòng đất gắn bó.', en: 'Sharing and caring for the weakest kept the underground community together.' }, best: true },
-        { id: 'b', text: { vi: 'Người đến trước', en: 'Whoever comes first' }, explain: { vi: 'Trong hoàn cảnh khắc nghiệt, người ta chọn sẻ chia thay vì tranh giành.', en: 'In harsh conditions people chose sharing over competing.' } },
-        { id: 'c', text: { vi: 'Để dành cho nấu ăn', en: 'Save it for cooking' }, explain: { vi: 'Nấu ăn cũng cần nước, nhưng người bị thương thường được ưu tiên.', en: 'Cooking needs water too, but the wounded usually came first.' } },
+        {
+          id: 'a',
+          text: { vi: 'Người bị thương', en: 'The wounded' },
+          explain: {
+            vi: 'Sự sẻ chia và ưu tiên người yếu là điều giữ cộng đồng dưới lòng đất gắn bó.',
+            en: 'Sharing and caring for the weakest kept the underground community together.',
+          },
+          best: true,
+        },
+        {
+          id: 'b',
+          text: { vi: 'Người đến trước', en: 'Whoever comes first' },
+          explain: {
+            vi: 'Trong hoàn cảnh khắc nghiệt, người ta chọn sẻ chia thay vì tranh giành.',
+            en: 'In harsh conditions people chose sharing over competing.',
+          },
+        },
+        {
+          id: 'c',
+          text: { vi: 'Để dành cho nấu ăn', en: 'Save it for cooking' },
+          explain: {
+            vi: 'Nấu ăn cũng cần nước, nhưng người bị thương thường được ưu tiên.',
+            en: 'Cooking needs water too, but the wounded usually came first.',
+          },
+        },
       ],
     },
     reflect: {
-      question: { vi: 'Điều gì bạn coi là hiển nhiên hôm nay nhưng là món quà với người dưới hầm?', en: 'What do you take for granted that was a gift underground?' },
+      question: {
+        vi: 'Điều gì bạn coi là hiển nhiên hôm nay nhưng là món quà với người dưới hầm?',
+        en: 'What do you take for granted that was a gift underground?',
+      },
       quick: [
         { vi: 'Nước sạch', en: 'Clean water' },
         { vi: 'Ánh sáng mặt trời', en: 'Sunlight' },
         { vi: 'Không khí trong lành', en: 'Fresh air' },
       ],
     },
-    fragment: { title: { vi: 'Giếng nước', en: 'The well' }, type: 'audio', media: 'siteWell', caption: { vi: 'Âm thanh gàu nước trong lòng đất', en: 'The sound of a bucket underground' } },
+    fragment: {
+      title: { vi: 'Giếng nước', en: 'The well' },
+      type: 'audio',
+      media: 'siteWell',
+      caption: { vi: 'Âm thanh gàu nước trong lòng đất', en: 'The sound of a bucket underground' },
+    },
   },
   {
     id: 'ham-quan-y',
@@ -343,7 +485,10 @@ export const checkpoints: Checkpoint[] = [
     accessibility: { vi: 'Đoạn hầm hẹp; có thể xem qua VR tại khu trải nghiệm', en: 'Narrow section; can be viewed in VR at the experience area' },
     underground: true,
     zone: 'clinic',
-    hook: { vi: 'Không bệnh viện, không điện, thuốc men khan hiếm. Người bị thương được cứu chữa ra sao?', en: 'No hospital, no electricity, little medicine. How were the wounded treated?' },
+    hook: {
+      vi: 'Không bệnh viện, không điện, thuốc men khan hiếm. Người bị thương được cứu chữa ra sao?',
+      en: 'No hospital, no electricity, little medicine. How were the wounded treated?',
+    },
     arLayers: [
       { label: { vi: 'Khu chữa trị', en: 'Treatment area' }, shape: 'outline' },
       { label: { vi: 'Người thầy thuốc và người bệnh', en: 'Medic and patient' }, shape: 'people' },
@@ -366,8 +511,23 @@ export const checkpoints: Checkpoint[] = [
     interact: {
       prompt: { vi: 'Đèn sắp hết dầu giữa ca chữa trị. Bạn sẽ làm gì?', en: 'The lamp is running out of oil mid-treatment. What do you do?' },
       options: [
-        { id: 'a', text: { vi: 'Dừng lại chờ trời sáng', en: 'Stop and wait for daylight' }, explain: { vi: 'Dưới lòng đất không có ánh sáng ban ngày — người thầy thuốc phải xoay xở ngay.', en: 'There is no daylight underground — the medic had to manage right away.' } },
-        { id: 'b', text: { vi: 'Tiết kiệm dầu, làm việc nhanh và phối hợp', en: 'Ration the oil, work fast and as a team' }, explain: { vi: 'Sự phối hợp và tiết kiệm từng thứ nhỏ nhất là cách họ duy trì sự sống.', en: 'Teamwork and saving every little thing is how they kept people alive.' }, best: true },
+        {
+          id: 'a',
+          text: { vi: 'Dừng lại chờ trời sáng', en: 'Stop and wait for daylight' },
+          explain: {
+            vi: 'Dưới lòng đất không có ánh sáng ban ngày — người thầy thuốc phải xoay xở ngay.',
+            en: 'There is no daylight underground — the medic had to manage right away.',
+          },
+        },
+        {
+          id: 'b',
+          text: { vi: 'Tiết kiệm dầu, làm việc nhanh và phối hợp', en: 'Ration the oil, work fast and as a team' },
+          explain: {
+            vi: 'Sự phối hợp và tiết kiệm từng thứ nhỏ nhất là cách họ duy trì sự sống.',
+            en: 'Teamwork and saving every little thing is how they kept people alive.',
+          },
+          best: true,
+        },
       ],
     },
     reflect: {
@@ -377,7 +537,12 @@ export const checkpoints: Checkpoint[] = [
         { vi: 'Tôi khâm phục sự kiên cường', en: 'I admire your resilience' },
       ],
     },
-    fragment: { title: { vi: 'Hầm quân y', en: 'Field clinic' }, type: 'postcard', media: 'siteMedical', caption: { vi: 'Bưu thiếp: ngọn đèn trong hầm quân y', en: 'Postcard: the lamp in the field clinic' } },
+    fragment: {
+      title: { vi: 'Hầm quân y', en: 'Field clinic' },
+      type: 'postcard',
+      media: 'siteMedical',
+      caption: { vi: 'Bưu thiếp: ngọn đèn trong hầm quân y', en: 'Postcard: the lamp in the field clinic' },
+    },
   },
   {
     id: 'ho-bom',
@@ -392,7 +557,10 @@ export const checkpoints: Checkpoint[] = [
     accessibility: { vi: 'Đường mòn trong rừng cao su, có chỗ nghỉ', en: 'Trail through the rubber forest, rest stops available' },
     underground: false,
     zone: 'crater',
-    hook: { vi: 'Hố đất khổng lồ này được tạo ra chỉ trong một khoảnh khắc. Vậy người dưới hầm đã vượt qua thế nào?', en: 'This huge crater was made in an instant. How did the people below survive?' },
+    hook: {
+      vi: 'Hố đất khổng lồ này được tạo ra chỉ trong một khoảnh khắc. Vậy người dưới hầm đã vượt qua thế nào?',
+      en: 'This huge crater was made in an instant. How did the people below survive?',
+    },
     arLayers: [
       { label: { vi: 'Kích thước hố bom', en: 'Size of the crater' }, shape: 'outline' },
       { label: { vi: 'Các tầng hầm sâu bên dưới', en: 'The deep levels below' }, shape: 'structure' },
@@ -412,8 +580,20 @@ export const checkpoints: Checkpoint[] = [
     interact: {
       prompt: { vi: 'Điều gì giúp người dưới hầm an toàn hơn trước bom?', en: 'What made people underground safer from bombing?' },
       options: [
-        { id: 'a', text: { vi: 'Hầm nhiều tầng, đào sâu', en: 'Multiple, deeper levels' }, explain: { vi: 'Địa đạo có nhiều tầng, tầng sâu nhất giúp tránh sức công phá trên mặt đất.', en: 'Tunnels had several levels; the deepest helped escape the force above.' }, best: true },
-        { id: 'b', text: { vi: 'Ở gần mặt đất để chạy ra nhanh', en: 'Stay near the surface to run out fast' }, explain: { vi: 'Gần mặt đất lại là nơi chịu ảnh hưởng mạnh nhất.', en: 'Near the surface is where the impact is strongest.' } },
+        {
+          id: 'a',
+          text: { vi: 'Hầm nhiều tầng, đào sâu', en: 'Multiple, deeper levels' },
+          explain: {
+            vi: 'Địa đạo có nhiều tầng, tầng sâu nhất giúp tránh sức công phá trên mặt đất.',
+            en: 'Tunnels had several levels; the deepest helped escape the force above.',
+          },
+          best: true,
+        },
+        {
+          id: 'b',
+          text: { vi: 'Ở gần mặt đất để chạy ra nhanh', en: 'Stay near the surface to run out fast' },
+          explain: { vi: 'Gần mặt đất lại là nơi chịu ảnh hưởng mạnh nhất.', en: 'Near the surface is where the impact is strongest.' },
+        },
       ],
     },
     reflect: {
@@ -423,7 +603,12 @@ export const checkpoints: Checkpoint[] = [
         { vi: 'Tôi muốn kể lại câu chuyện này', en: 'I want to retell this story' },
       ],
     },
-    fragment: { title: { vi: 'Hố bom B52', en: 'B-52 crater' }, type: 'photo', media: 'siteBomb', caption: { vi: 'Dấu vết chiến tranh trên mặt đất', en: 'Traces of war on the land' } },
+    fragment: {
+      title: { vi: 'Hố bom B52', en: 'B-52 crater' },
+      type: 'photo',
+      media: 'siteBomb',
+      caption: { vi: 'Dấu vết chiến tranh trên mặt đất', en: 'Traces of war on the land' },
+    },
   },
 ];
 

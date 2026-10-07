@@ -36,14 +36,7 @@ export function Icon({ name, size = 22, color = colors.ink, fill }: { name: Icon
       {withCircle.includes(name) ? <Circle cx={12} cy={12} r={9} stroke={color} strokeWidth={1.8} /> : null}
       {name === 'passport' ? <Circle cx={11.5} cy={10} r={3} stroke={color} strokeWidth={1.8} /> : null}
       {name === 'vr' ? <Rect x={6} y={9} width={4} height={3} rx={1} fill={color} /> : null}
-      <Path
-        d={paths[name]}
-        stroke={color}
-        strokeWidth={1.8}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill={fill || name === 'play' ? color : 'none'}
-      />
+      <Path d={paths[name]} stroke={color} strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" fill={fill || name === 'play' ? color : 'none'} />
     </Svg>
   );
 }

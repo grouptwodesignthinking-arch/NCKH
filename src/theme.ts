@@ -33,3 +33,10 @@ export const shadow = {
   shadowOffset: { width: 0, height: 4 },
   elevation: 3,
 };
+
+/**
+ * Full-bleed image style. On web, react-native-web sizes an <Image> from its
+ * intrinsic dimensions unless width/height are given, so absoluteFill alone
+ * is not enough.
+ */
+export const fill = { position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' } as const;

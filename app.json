@@ -1,31 +1,51 @@
 {
   "expo": {
-    "name": "scaffold",
-    "slug": "scaffold",
+    "name": "Củ Chi Stories",
+    "slug": "cu-chi-stories",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Củ Chi Stories dùng camera để hiển thị lớp AR lên di tích thật.",
+        "NSMotionUsageDescription": "Dùng cảm biến chuyển động để nhìn quanh trong trải nghiệm 360°."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#2F3A1D",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
     },
     "plugins": [
       "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Củ Chi Stories dùng camera để hiển thị lớp AR lên di tích thật.",
+          "recordAudioAndroid": false
+        }
+      ],
       "expo-sharing",
       "expo-font",
       "expo-asset"
-    ]
+    ],
+    "scheme": "cuchistories",
+    "experiments": {
+      "typedRoutes": false
+    }
   }
 }
