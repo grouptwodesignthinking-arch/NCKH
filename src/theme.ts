@@ -1,0 +1,35 @@
+// Palette taken from the concept mockups: aged paper, olive green, earth brown.
+export const colors = {
+  paper: '#F1E8D6',
+  paperDeep: '#E6DAC1',
+  card: '#FBF6EC',
+  ink: '#2B2418',
+  inkSoft: '#6B5E4A',
+  line: '#D8CAAE',
+  olive: '#4A5A2E',
+  oliveDark: '#2F3A1D',
+  oliveLight: '#7C8B57',
+  earth: '#7A4E2D',
+  ember: '#C8862F',
+  night: '#1C1A14',
+  nightSoft: '#2A2720',
+  stampRed: '#A33B2B',
+  white: '#FFFFFF',
+  locked: '#9C9282',
+};
+
+export const radius = { sm: 8, md: 14, lg: 22, pill: 999 };
+export const space = (n: number) => n * 4;
+
+export const fonts = {
+  // System serif keeps the "archival" feel without bundling font files.
+  display: 'Georgia',
+};
+
+export const shadow = {
+  shadowColor: '#000',
+  shadowOpacity: 0.12,
+  shadowRadius: 10,
+  shadowOffset: { width: 0, height: 4 },
+  elevation: 3,
+};
