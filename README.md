@@ -20,6 +20,14 @@ npx expo start --web  # mở bản web trên laptop để demo
 - **iPad:** mở bằng Expo Go như trên. Màn *Mô hình 3D địa đạo* tự chuyển sang bố cục 3 cột cho máy tính bảng.
 - **Web:** `npm run export:web` xuất bản tĩnh vào thư mục `dist/`, có thể đưa lên GitHub Pages, Netlify hoặc Vercel. Bản web vẫn dùng được webcam cho AR.
 
+### Xuất ra một file HTML duy nhất
+
+```bash
+npm run export:html   # → dist-html/cu-chi-stories.html (~6 MB)
+```
+
+Đây là bản web đóng gói thành **một file `.html`**, gồm JS và toàn bộ ảnh nhúng sẵn. **Bấm đúp là mở**, không cần mạng hay server, và có thể gửi qua email, Zalo hay USB để trình chiếu. Bên trong, app điều hướng bằng `#/đường-dẫn` vì trình duyệt không cho đổi đường dẫn trên trang `file://`. Camera AR trên bản này tuỳ trình duyệt có cho phép hay không; nếu không, app tự dùng ảnh minh hoạ.
+
 Kiểm tra mã: `npm run typecheck` · `npm run lint` · `npm run format`
 
 ## Hành trình người dùng

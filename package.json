@@ -49,7 +49,8 @@
     "typecheck": "tsc --noEmit",
     "export:web": "expo export -p web",
     "lint": "eslint src",
-    "format": "prettier --write 'src/**/*.{ts,tsx}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "export:html": "expo export -p web && node scripts/build-standalone-html.mjs"
   },
   "private": true
 }
