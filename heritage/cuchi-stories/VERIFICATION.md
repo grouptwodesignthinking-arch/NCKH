@@ -27,3 +27,15 @@ Kiểm thử tự động bằng Chromium với camera giả: video có mã QR C
 - Luồng chính không đổi: trả lời đúng mở hộp nhận dấu, hộ chiếu có dấu. Không có lỗi JavaScript.
 
 Chưa kiểm thử trên iPhone/Android thật với mã QR in thật, và với BarcodeDetector gốc (Chrome Android/macOS).
+
+## Cập nhật — bản đồ 3D, VR, vật thể AR
+
+Kiểm thử tự động bằng Chromium (WebGL SwiftShader, camera giả có mã QR CC-03 di chuyển/xoay). Chạy trên bản HTML độc lập (file://), `server.py` và đường dẫn con `/NCKH/` như GitHub Pages: mỗi bản 21/21 mục 3D đạt, và bộ 18 mục cũ vẫn đạt:
+
+- Bản đồ 3D vẽ ra nội dung; 6 nhãn trạm; chạm nhãn mở thông tin trạm; kéo để xoay; tắt lớp Mặt đất ẩn nhãn trên mặt đất; chọn trạm từ danh sách.
+- AR bản đồ: bật camera, mô hình bám mã CC-03.
+- Màn AR: xem trước vật thể 3D khi chưa bật camera; khi bám mã, vật thể hiện trên mã.
+- VR: cả 6 cảnh vẽ ra với đủ số điểm; chạm điểm hiện chú thích; kéo để nhìn quanh; chế độ kính VR; đường hầm giữ nút để đi tới.
+- Quét mã: vật thể bật ra rồi mở đúng chương. Không có lỗi JavaScript.
+
+Chưa thử trên iPhone/Android thật: hiệu năng WebGL, con quay (iOS cần cho phép Motion & Orientation khi bấm nút), toàn màn hình/xoay ngang ở chế độ kính VR (Safari iOS không hỗ trợ Fullscreen API cho trang thường, vẫn chia đôi màn hình được).

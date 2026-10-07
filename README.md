@@ -118,7 +118,7 @@ scripts/crop_concept_images.py
 
 ## Xuất bản bản Heritage (GitHub Pages)
 
-Thư mục `docs/` chứa bản Heritage đóng gói thành một file (`docs/index.html`). GitHub Pages phục vụ qua HTTPS, nên trên điện thoại dùng được đủ chức năng, kể cả camera quét QR và AR bám mã trạm.
+Thư mục `docs/` chứa bản Heritage đóng gói thành một file (`docs/index.html`). GitHub Pages phục vụ qua HTTPS, nên trên điện thoại dùng được đủ chức năng, kể cả camera quét QR và AR bám mã trạm. Bản này có **Bản đồ 3D địa đạo** (`#/explorer`, xoay/phóng, bật tắt từng tầng, đặt lên mã trạm bằng AR), **cảnh VR** cho 6 trạm (`#/vr/<trạm>`, kéo hoặc con quay, chế độ kính VR), và **vật thể 3D** hiện trên mã khi quét và ở màn AR. Mô hình là minh họa dựng bằng three.js, không theo tỷ lệ.
 
 Bật một lần (cần quyền admin của repo):
 

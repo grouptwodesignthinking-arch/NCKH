@@ -25,7 +25,8 @@ QR nhận mã CC-01 … CC-06, kể cả khi nội dung QR là đường dẫn c
 5. Không cộng điểm do camera được mở. Tiến trình hiện chỉ nhận khi trả lời đúng; nếu thêm nhiệm vụ thực địa, cần xác định bằng chứng và chống cộng trùng.
 6. ✅ Một phần: camera dừng khi đổi màn hình, ẩn tab (visibilitychange), pagehide và khi track bị ngắt; ràng buộc camera sau quá thử lại với video:true; có thông báo lỗi riêng cho từng trường hợp. Còn cần thử trên thiết bị thật: xoay máy, iOS/Android, mã in thật.
 7. Nếu thêm trước–sau lịch sử cần cặp tư liệu thật tương ứng và nguồn. Màn compare hiện chỉ là sepia / ảnh gốc, nhãn phải giữ đúng.
-8. Nếu thêm VR 360° cần panorama equirectangular hoặc video VR thực; ảnh phẳng không được gọi là 360°.
+8. Nếu thêm VR 360° cần panorama equirectangular hoặc video VR thực; ảnh phẳng không được gọi là 360°. ✅ Đã có cảnh VR **dựng 3D** (không phải 360° chụp thật) cho 6 trạm, ghi nhãn “Mô hình minh họa”.
+9. ✅ Bản đồ 3D, VR và vật thể AR nằm trong `assets/cuchi3d.js` (`CuChi3D.createMap`, `createVR`, `createARObject`; dữ liệu trạm `CuChi3D.stations`). app.js gắn chúng qua `mount3D()` / `unmount3D()` mỗi lần render; màn AR gọi `setLive(true)` sau khi có bộ đọc QR, `setPose(pose)` khi đang bám, `setPose(null)` khi mất mã. Muốn thay bằng mô hình GLB/glTF thật: giữ API này, đổi hàm `build*` của trạm thành loader (cần GLTFLoader và mô hình có phép sử dụng). Kích thước mô hình quy ước ~1 đơn vị trên mặt mã.
 
 ## Backend hiện có
 

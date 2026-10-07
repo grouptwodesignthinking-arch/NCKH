@@ -13,8 +13,9 @@ for file in (ROOT/'assets').glob('*.webp'):
     assets[file.name]='data:image/webp;base64,'+base64.b64encode(file.read_bytes()).decode()
 html=html.replace('<link rel="stylesheet" href="styles.css">','<style>'+css+'</style>')
 html=html.replace('<script src="credits.js"></script>','<script>'+(ROOT/'credits.js').read_text()+'</script>')
-# Bộ đọc QR jsQR (Apache-2.0) nhúng sẵn để quét được cả trên trình duyệt không có BarcodeDetector.
-html=html.replace('<script src="assets/jsQR.js"></script>','<script>'+(ROOT/'assets'/'jsQR.js').read_text().replace('</script','<\\/script')+'</script>')
+# Bộ đọc QR jsQR (Apache-2.0), three.js r149 (MIT) và lớp 3D cuchi3d.js nhúng sẵn để chạy offline.
+for lib in ('jsQR.js','three.min.js','cuchi3d.js'):
+    html=html.replace(f'<script src="assets/{lib}"></script>','<script>'+(ROOT/'assets'/lib).read_text().replace('</script','<\\/script')+'</script>')
 html=html.replace('<script src="app.js"></script>','<script>window.CUCHI_STANDALONE=true;window.CUCHI_ASSETS='+json.dumps(assets)+';</script><script>'+(ROOT/'app.js').read_text()+'</script>')
 output=ROOT.parent/'Cu-Chi-Stories-Heritage.html'
 output.write_text(html)
