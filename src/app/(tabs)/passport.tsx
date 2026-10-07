@@ -5,13 +5,13 @@ import { Icon } from '../../components/Icon';
 import { Stamp } from '../../components/Stamp';
 import { Button, Card, Chip, Photo, ProgressBar, Screen, styles as ui } from '../../components/ui';
 import { achievements } from '../../data/achievements';
-import { checkpointById } from '../../data/checkpoints';
+import { checkpointById, type CheckpointId } from '../../data/checkpoints';
 import { companionById } from '../../data/companions';
 import { useT } from '../../i18n';
 import { routeOf, useProgress, xpOf, XP_PER_LEVEL } from '../../store/progress';
 import { colors, fonts, radius } from '../../theme';
 
-type Tab = 'fragments' | 'stamps' | 'achievements';
+type Tab = 'fragments' | 'stamps' | 'achievements' | 'diary';
 
 /** Memory Passport (concept §10–12). */
 export default function Passport() {
@@ -45,6 +45,7 @@ export default function Passport() {
         <Chip label={t('fragments')} active={tab === 'fragments'} onPress={() => setTab('fragments')} />
         <Chip label={t('stamps')} active={tab === 'stamps'} onPress={() => setTab('stamps')} />
         <Chip label={t('achievements')} active={tab === 'achievements'} onPress={() => setTab('achievements')} />
+        <Chip label={t('diary')} active={tab === 'diary'} onPress={() => setTab('diary')} />
       </View>
 
       {tab === 'fragments' && (
@@ -87,6 +88,8 @@ export default function Passport() {
         </View>
       )}
 
+      {tab === 'diary' && <Diary />}
+
       {tab === 'achievements' &&
         achievements.map((a) => {
           const got = a.earned(s);
@@ -114,5 +117,41 @@ export default function Passport() {
 
       {done > 0 ? <Button icon="star" label={t('souvenir')} onPress={() => router.push('/souvenir')} /> : null}
     </Screen>
+  );
+}
+
+/** Journey diary: an automatic log of each completed chapter (time, place, choice, reflection). */
+function Diary() {
+  const { t, tr, lang } = useT();
+  const chapters = useProgress((s) => s.chapters);
+  const entries = (Object.keys(chapters) as CheckpointId[]).map((id) => ({ id, rec: chapters[id]! })).sort((a, b) => a.rec.completedAt - b.rec.completedAt);
+  if (!entries.length) return <Text style={ui.muted}>{t('diaryEmpty')}</Text>;
+  return (
+    <View style={{ gap: 12 }}>
+      {entries.map(({ id, rec }) => {
+        const c = checkpointById[id];
+        const d = new Date(rec.completedAt);
+        const choice = c.interact.options.find((o) => o.id === rec.choice);
+        return (
+          <Card key={id} style={{ gap: 8 }}>
+            <Text style={[ui.muted, { fontWeight: '700', color: colors.ember }]}>
+              {d.toLocaleDateString(lang === 'vi' ? 'vi-VN' : 'en-GB')} · {String(d.getHours()).padStart(2, '0')}:{String(d.getMinutes()).padStart(2, '0')}
+            </Text>
+            <View style={{ flexDirection: 'row', gap: 10 }}>
+              <Photo k={c.image} badge={false} style={{ width: 64, height: 64, borderRadius: radius.sm }} />
+              <View style={{ flex: 1, gap: 2 }}>
+                <Text style={ui.h3}>{tr(c.name)}</Text>
+                {choice ? (
+                  <Text style={ui.muted}>
+                    {t('yourChoice')}: {tr(choice.text)}
+                  </Text>
+                ) : null}
+              </View>
+            </View>
+            {rec.reflection ? <Text style={[ui.body, { fontStyle: 'italic' }]}>“{rec.reflection}”</Text> : null}
+          </Card>
+        );
+      })}
+    </View>
   );
 }

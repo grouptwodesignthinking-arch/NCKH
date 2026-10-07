@@ -7,6 +7,7 @@ import { Button, Card, Chip, Photo, ProgressBar, Screen, styles as ui } from '..
 import { checkpointById, type CheckpointId } from '../../data/checkpoints';
 import { companionById } from '../../data/companions';
 import { journeyById } from '../../data/journeys';
+import { matchesFilter, type MapFilter } from '../../data/wayfinding';
 import { useT } from '../../i18n';
 import { routeOf, statusOf, useProgress, type CheckpointStatus } from '../../store/progress';
 import { colors } from '../../theme';
@@ -18,6 +19,7 @@ export default function MapScreen() {
   const status = (id: CheckpointId) => statusOf(s, id);
   const firstOpen = route.find((id) => status(id) === 'open') ?? route[0];
   const [selected, setSelected] = useState<CheckpointId>(firstOpen);
+  const [filter, setFilter] = useState<MapFilter>('all');
   const sel = checkpointById[route.includes(selected) ? selected : firstOpen];
   const st = status(sel.id);
   const doneCount = route.filter((id) => s.chapters[id]).length;
@@ -42,7 +44,13 @@ export default function MapScreen() {
         <ProgressBar value={doneCount / route.length} />
       </View>
 
-      <MissionMap route={route} statusOf={status} selected={sel.id} onSelect={setSelected} />
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: 6 }}>
+        {FILTERS.map(([f, key]) => (
+          <Chip key={f} label={t(key)} active={filter === f} onPress={() => setFilter(f)} />
+        ))}
+      </View>
+
+      <MissionMap route={route} statusOf={status} selected={sel.id} onSelect={setSelected} dimmed={(id) => !matchesFilter(checkpointById[id], filter)} />
 
       <View style={{ flexDirection: 'row', gap: 12, flexWrap: 'wrap' }}>
         <Legend color={colors.olive} label={t('statusDone')} />
@@ -73,7 +81,21 @@ export default function MapScreen() {
         {st === 'locked' ? (
           <Text style={[ui.muted, { fontStyle: 'italic' }]}>{t('lockedHint')}</Text>
         ) : (
-          <Button label={st === 'done' ? t('replay') : t('begin')} icon="arrow" onPress={() => router.push(`/chapter/${sel.id}`)} />
+          <View style={{ flexDirection: 'row', gap: 10 }}>
+            <Button
+              variant="ghost"
+              label={t('directions')}
+              icon="walk"
+              onPress={() => router.push(`/directions/${sel.id}`)}
+              style={{ flex: 1, paddingHorizontal: 10 }}
+            />
+            <Button
+              label={st === 'done' ? t('replay') : t('begin')}
+              icon="arrow"
+              onPress={() => router.push(`/chapter/${sel.id}`)}
+              style={{ flex: 1, paddingHorizontal: 10 }}
+            />
+          </View>
         )}
       </Card>
 
@@ -85,6 +107,13 @@ export default function MapScreen() {
     </Screen>
   );
 }
+
+const FILTERS = [
+  ['all', 'filterAll'],
+  ['underground', 'filterUnderground'],
+  ['surface', 'filterSurface'],
+  ['pastPresent', 'filterPastPresent'],
+] as const satisfies readonly (readonly [MapFilter, Parameters<ReturnType<typeof useT>['t']>[0]])[];
 
 function statusLabel(t: ReturnType<typeof useT>['t'], st: CheckpointStatus) {
   return st === 'done' ? t('statusDone') : st === 'open' ? t('statusOpen') : t('statusLocked');

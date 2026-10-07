@@ -186,6 +186,61 @@ export const strings = s({
   share: { vi: 'Chia sẻ thẻ ký ức', en: 'Share memory card' },
   shareUnavailable: { vi: 'Thiết bị này chưa hỗ trợ chia sẻ ảnh.', en: 'Sharing is not available on this device.' },
   souvenirEmpty: { vi: 'Hoàn thành ít nhất một chương để tạo thẻ ký ức.', en: 'Complete at least one chapter to create your card.' },
+
+  filterAll: { vi: 'Tất cả', en: 'All' },
+  filterUnderground: { vi: 'Dưới lòng đất', en: 'Underground' },
+  filterSurface: { vi: 'Trên mặt đất', en: 'Above ground' },
+  filterPastPresent: { vi: 'Có Xưa ⟷ Nay', en: 'Then ⟷ Now' },
+
+  directions: { vi: 'Chỉ đường', en: 'Directions' },
+  goStraight: { vi: 'Đi khoảng {n} m tới', en: 'Walk about {n} m to' },
+  fromGate: { vi: 'Từ cổng vào', en: 'From the entrance' },
+  fromPlace: { vi: 'Từ {name}', en: 'From {name}' },
+  directionsOffline: {
+    vi: 'Chỉ đường hoạt động cả khi không có sóng. Ở di tích, hãy đi theo biển chỉ dẫn và lối mòn chính — không đi tắt vào rừng.',
+    en: 'Directions work without signal. On site, follow the signs and the main trail — do not cut through the forest.',
+  },
+  sampleDirections: { vi: 'Chỉ dẫn mẫu cho prototype', en: 'Sample directions for the prototype' },
+
+  thenOverlay: { vi: 'Lớp Xưa', en: 'Then layer' },
+  thenOpacity: { vi: 'Kéo để chuyển dần sang cảnh xưa', en: 'Drag to fade into the past' },
+
+  startTime: { vi: 'Giờ bắt đầu', en: 'Start time' },
+  finishAround: { vi: 'Dự kiến kết thúc khoảng {time}', en: 'Expected to finish around {time}' },
+  restStop: { vi: 'Nghỉ chân, uống nước', en: 'Rest and drink water' },
+  nearby: { vi: 'Khám phá xung quanh', en: 'Explore nearby' },
+  nearbyNote: { vi: 'Gợi ý mẫu — cần xác nhận khoảng cách và giờ mở cửa thực tế.', en: 'Sample suggestions — confirm distances and opening hours.' },
+
+  diary: { vi: 'Nhật ký', en: 'Diary' },
+  diaryEmpty: { vi: 'Nhật ký sẽ tự ghi lại mỗi chương bạn hoàn thành.', en: 'Your diary fills in as you complete chapters.' },
+  yourChoice: { vi: 'Bạn đã chọn', en: 'You chose' },
+
+  navExplore: { vi: 'Khám phá', en: 'Explore' },
+  navStories: { vi: 'Câu chuyện', en: 'Stories' },
+  navAr: { vi: 'Trải nghiệm AR', en: 'AR experience' },
+  navPlan: { vi: 'Lên kế hoạch', en: 'Plan your visit' },
+  heroTitle: { vi: 'Đường hầm nhỏ.\nCâu chuyện lớn.', en: 'Small tunnels.\nBig stories.' },
+  heroSub: {
+    vi: 'Bước vào thế giới dưới lòng đất của Củ Chi — nơi lịch sử vẫn đang sống, qua AR và những câu chuyện chân thực.',
+    en: 'Step into the underground world of Củ Chi — where history still lives, through AR and real stories.',
+  },
+  exploreWithAr: { vi: 'Khám phá cùng AR', en: 'Explore with AR' },
+  openOnPhone: {
+    vi: 'Trải nghiệm AR đầy đủ nhất trên điện thoại tại di tích. Trên máy tính, bạn có thể lên kế hoạch, xem mô hình 3D và nghe câu chuyện trước chuyến đi.',
+    en: 'AR works best on your phone at the site. On a computer you can plan, explore the 3D model and listen to stories before you go.',
+  },
+  featureArTitle: { vi: 'Điểm AR', en: 'AR locations' },
+  featureArSub: { vi: 'Quét di tích, thấy quá khứ', en: 'Scan the site, see the past' },
+  featureStoriesTitle: { vi: 'Câu chuyện thật', en: 'Real stories' },
+  featureStoriesSub: { vi: 'Tiếng nói từ lịch sử', en: 'Voices from history' },
+  feature3dTitle: { vi: 'Mô hình 3D', en: '3D model' },
+  feature3dSub: { vi: 'Nhìn xuyên các tầng địa đạo', en: 'See through every tunnel level' },
+  featurePlanTitle: { vi: 'Lên kế hoạch', en: 'Plan your visit' },
+  featurePlanSub: { vi: 'Lịch trình, giờ mở cửa, lưu ý', en: 'Itinerary, hours and tips' },
+  flowLearn: { vi: 'Tìm hiểu trước chuyến đi', en: 'Learn before you go' },
+  flowAr: { vi: 'Khám phá tại di tích với AR', en: 'Explore on site with AR' },
+  flowListen: { vi: 'Lắng nghe câu chuyện nhân chứng', en: 'Listen to witness stories' },
+  flowKeep: { vi: 'Lưu lại hành trình cá nhân', en: 'Keep your own journey' },
 });
 
 export type StringKey = keyof typeof strings;

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Image, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ArOverlay } from '../../components/ArOverlay';
+import { FadeSlider } from '../../components/FadeSlider';
 import { Icon } from '../../components/Icon';
 import { XRaySchematic } from '../../components/XRaySchematic';
 import { Button, Chip, MediaBadge } from '../../components/ui';
@@ -31,6 +32,8 @@ export default function ArScreen() {
   const [phase, setPhase] = useState<Phase>('aim');
   const [revealed, setRevealed] = useState(0);
   const [xray, setXray] = useState(false);
+  const [past, setPast] = useState(false);
+  const [pastAmount, setPastAmount] = useState(0.6);
 
   useEffect(() => {
     if (permission && !permission.granted && permission.canAskAgain && permission.status === 'undetermined') void requestPermission();
@@ -60,6 +63,9 @@ export default function ArScreen() {
         <Image source={media[c.arScene].source} style={fill} resizeMode="cover" />
       )}
 
+      {/* Past ⟷ Present: fade a historical reconstruction over the live view (concept §8) */}
+      {past && c.pastPresent ? <Image source={media[c.pastPresent.then].source} style={[fill, { opacity: pastAmount }]} resizeMode="cover" /> : null}
+
       {/* the digital layer */}
       {phase === 'reveal' && showGhost && c.arGhost ? <Image source={media[c.arGhost].source} style={[styles.ghost]} resizeMode="cover" /> : null}
       {phase === 'reveal' ? <ArOverlay layers={c.arLayers} revealed={revealed} /> : null}
@@ -74,8 +80,20 @@ export default function ArScreen() {
           <Pressable onPress={() => router.back()} style={styles.round} accessibilityLabel={t('close')}>
             <Icon name="close" color={colors.paper} />
           </Pressable>
-          <View style={styles.arPill}>
-            <Text style={styles.arPillText}>AR</Text>
+          <View style={{ flexDirection: 'row', gap: 8 }}>
+            <View style={styles.arPill}>
+              <Text style={styles.arPillText}>AR</Text>
+            </View>
+            {c.pastPresent ? (
+              <Pressable
+                onPress={() => setPast((v) => !v)}
+                style={[styles.arPill, past && { backgroundColor: colors.ember }]}
+                accessibilityRole="button"
+                accessibilityLabel={t('thenOverlay')}
+              >
+                <Text style={styles.arPillText}>{t('then')}</Text>
+              </Pressable>
+            ) : null}
           </View>
           <Pressable onPress={() => setXray((v) => !v)} style={[styles.round, xray && { backgroundColor: colors.ember }]} accessibilityLabel={t('xray')}>
             <Icon name="xray" color={colors.paper} />
@@ -103,6 +121,14 @@ export default function ArScreen() {
         ) : null}
 
         <View style={styles.sheet}>
+          {past && c.pastPresent ? (
+            <View style={{ alignSelf: 'stretch', gap: 4 }}>
+              <FadeSlider value={pastAmount} onChange={setPastAmount} left={t('now')} right={t('then')} />
+              <Text style={styles.sheetSmall}>
+                {t('thenOpacity')} · {t('reconstructionLabel')}
+              </Text>
+            </View>
+          ) : null}
           {phase === 'aim' && (
             <>
               <Text style={styles.sheetTitle}>{t('somethingHidden')}</Text>

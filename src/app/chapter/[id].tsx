@@ -331,7 +331,7 @@ function Unlock({ c, chapterNo, before }: { c: Checkpoint; chapterNo: number; be
         </Card>
       ))}
       {nextId ? (
-        <Button label={`${t('nextChapter')}: ${tr(checkpointById[nextId].name)}`} icon="arrow" onPress={() => router.replace(`/chapter/${nextId}`)} />
+        <Button label={`${t('nextChapter')}: ${tr(checkpointById[nextId].name)}`} icon="arrow" onPress={() => router.replace(`/directions/${nextId}`)} />
       ) : (
         <Button label={t('finishJourney')} icon="star" onPress={() => router.replace('/souvenir')} />
       )}

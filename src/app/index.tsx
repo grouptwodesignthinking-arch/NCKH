@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { DesktopHome } from '../components/DesktopHome';
 import { Button, LangToggle, MediaBadge } from '../components/ui';
 import { media } from '../data/media';
 import { useT } from '../i18n';
@@ -10,6 +11,9 @@ import { colors, fonts, fill } from '../theme';
 export default function Welcome() {
   const { t } = useT();
   const started = useProgress((s) => !!s.journeyId && !!s.companionId);
+  const { width } = useWindowDimensions();
+
+  if (Platform.OS === 'web' && width >= 1024) return <DesktopHome />;
 
   return (
     <View style={styles.root}>

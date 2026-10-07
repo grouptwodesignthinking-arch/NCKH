@@ -31,20 +31,23 @@ PLAN → EXPLORE → DISCOVER → SCAN → UNDERSTAND → LISTEN → INTERACT �
 1. **Màn hình chào:** *“Củ Chi — Chuyện kể dưới lòng đất”*, có nút chuyển **VI | EN**.
 2. **Chọn hành trình:** Cơ bản, Chuyên sâu, Gia đình hoặc Thử thách. Mỗi hành trình có thời lượng và tuyến điểm riêng.
 3. **Chọn người đồng hành:** người nấu ăn, chiến sĩ liên lạc, bác sĩ quân y hoặc người dân địa phương. Đây là *góc nhìn kể chuyện* dựng từ tư liệu, không phải cá nhân lịch sử cụ thể.
-4. **Bản đồ nhiệm vụ:** mỗi địa điểm là một *chương*, có 3 trạng thái: Đã khám phá, Đang mở, Chưa mở. Thẻ địa điểm ghi khoảng cách, thời gian đi bộ, thời lượng trải nghiệm và thông tin tiếp cận.
+4. **Bản đồ nhiệm vụ:** mỗi địa điểm là một *chương*, có 3 trạng thái: Đã khám phá, Đang mở, Chưa mở. Thẻ địa điểm ghi khoảng cách, thời gian đi bộ, thời lượng trải nghiệm và thông tin tiếp cận. Có bộ lọc *Dưới lòng đất / Trên mặt đất / Có Xưa ⟷ Nay*.
+   **Chỉ đường** tới từng điểm theo từng bước, dùng được khi không có sóng. Hết một chương, app dẫn sang phần chỉ đường tới chương kế tiếp.
 5. **Một chương** đi theo cấu trúc *micro-story*:
    **Hook → Discover (AR) → Understand (3D / Xưa ⟷ Nay) → Human story → Interact → Reflect → Unlock**
-6. **AR tại điểm:** camera thật hiển thị di tích, app phủ từng lớp số lên trên: đường viền, cấu trúc bên dưới, cách mở, đường nối vào địa đạo. Chế độ **Nhìn xuyên lòng đất (X-ray)** cho thấy sơ đồ các tầng hầm ngay bên dưới chỗ đứng. Nếu không có camera, app dùng ảnh minh hoạ của điểm đó.
+6. **AR tại điểm:** camera thật hiển thị di tích, app phủ từng lớp số lên trên: đường viền, cấu trúc bên dưới, cách mở, đường nối vào địa đạo. Chế độ **Nhìn xuyên lòng đất (X-ray)** cho thấy sơ đồ các tầng hầm ngay bên dưới chỗ đứng. Nút **Xưa** phủ dần bản tái hiện lên ngay trên hình camera, có thanh trượt Nay ⟷ Xưa. Nếu không có camera, app dùng ảnh minh hoạ của điểm đó.
 7. **Xưa ⟷ Nay:** kéo thanh trượt để so sánh hiện trạng với bản tái hiện. Bản tái hiện luôn gắn nhãn *“Tái hiện lịch sử dựa trên tư liệu hiện có”*.
 8. **Câu chuyện con người:** đọc hoặc nghe kể. Bản prototype dùng giọng đọc tổng hợp của máy (TTS) cho tới khi có bản thu thật.
 9. **Lựa chọn tình huống:** ví dụ *“Bạn đang sống tại khu căn cứ năm 1967…”*. Sau khi chọn, app không chỉ báo Đúng/Sai mà giải thích người xưa đã làm thế nào.
 10. **Suy ngẫm:** viết một câu hoặc chọn nhanh một câu có sẵn. Các câu này được đưa vào thẻ kỷ niệm cuối hành trình.
-11. **Hộ chiếu Ký ức:** gồm *Mảnh ký ức*, *Dấu mộc* (tên điểm, giờ, ngày, chương) và *Thành tựu*: Người tìm dấu khói, Nhà khám phá địa đạo, Người giải mã, Người lắng nghe, Củ Chi Explorer.
+11. **Hộ chiếu Ký ức:** gồm *Mảnh ký ức*, *Dấu mộc* (tên điểm, giờ, ngày, chương), *Nhật ký* (tự ghi lại thời gian, lựa chọn và câu suy ngẫm ở mỗi chương) và *Thành tựu*: Người tìm dấu khói, Nhà khám phá địa đạo, Người giải mã, Người lắng nghe, Củ Chi Explorer.
 12. **Câu chuyện mở khoá:** *“Một ngày dưới lòng đất”* mở sau 3 khu vực dưới lòng đất, *“Tiếng nói Củ Chi”* mở khi hoàn thành cả tuyến.
 13. **Thẻ “Hành trình Củ Chi của tôi”:** số địa điểm, câu chuyện, trải nghiệm AR, mảnh ký ức, câu chuyện đọng lại nhất và câu suy ngẫm của chính người dùng. Thẻ chia sẻ được dưới dạng ảnh trên điện thoại.
 14. **Mô hình 3D (chế độ iPad):** xoay mô hình địa đạo, bật/tắt Mặt đất và Tầng 1, 2, 3, chạm từng khu vực để xem thông tin.
 15. **VR / 360°:** *“Một ngày dưới lòng đất”*. Kéo hoặc nghiêng máy (con quay) để nhìn quanh, chạm điểm sáng để nghe thuyết minh.
-16. **Tiện ích:** giờ mở cửa, vé, tiện nghi, lưu ý và lịch trình. *Gói hành trình ngoại tuyến*: mọi nội dung đã nằm sẵn trong app nên vẫn chạy khi không có sóng.
+16. **Tiện ích:** giờ mở cửa, vé, tiện nghi, lưu ý; **lịch trình theo giờ bắt đầu** (tự tính giờ đến từng điểm, có điểm nghỉ chân); *Khám phá xung quanh*. *Gói hành trình ngoại tuyến*: mọi nội dung đã nằm sẵn trong app nên vẫn chạy khi không có sóng.
+
+17. **Trang chủ web cho máy tính:** mở bản web trên màn hình rộng (từ 1024px) sẽ thấy trang giới thiệu để lên kế hoạch trước chuyến đi, dẫn vào bản đồ, câu chuyện, mô hình 3D và lịch trình.
 
 ## Tính xác thực của nội dung
 
@@ -66,7 +69,7 @@ Mọi hình ảnh đều khai báo trong [`src/data/media.ts`](src/data/media.ts
 2. Sửa mục tương ứng trong `src/data/media.ts`: đổi `source`, đặt `kind: 'real'` hoặc `'archival'` và điền `credit` (nguồn, năm).
 3. Nếu muốn cắt lại ảnh từ concept: `python3 scripts/crop_concept_images.py` (cần Pillow).
 
-Nội dung lịch sử trong các chương (`src/data/checkpoints.ts`) được viết ở mức khái quát. **Nhóm cần đối chiếu với tư liệu của Ban quản lý Khu di tích Địa đạo Củ Chi** trước khi dùng chính thức. Giờ mở cửa và giá vé trong màn *Tiện ích* chỉ là dữ liệu mẫu.
+Nội dung lịch sử trong các chương (`src/data/checkpoints.ts`) được viết ở mức khái quát. **Nhóm cần đối chiếu với tư liệu của Ban quản lý Khu di tích Địa đạo Củ Chi** trước khi dùng chính thức. Giờ mở cửa, giá vé, chỉ dẫn đường đi (`src/data/wayfinding.ts`) và gợi ý *Khám phá xung quanh* chỉ là dữ liệu mẫu.
 
 ## Cấu trúc mã nguồn
 
@@ -83,6 +86,7 @@ src/
     vr.tsx                   # trải nghiệm 360°
     story/[id].tsx           # đọc / nghe câu chuyện
     souvenir.tsx             # thẻ "Hành trình Củ Chi của tôi"
+    directions/[id].tsx      # chỉ đường ngoại tuyến tới một điểm
   data/                      # nội dung song ngữ: checkpoints, journeys, companions, achievements, media
   store/progress.ts          # tiến độ (zustand + AsyncStorage, lưu trên máy)
   i18n/                      # chuỗi giao diện VI/EN

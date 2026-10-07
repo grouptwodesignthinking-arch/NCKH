@@ -16,11 +16,14 @@ export function MissionMap({
   statusOf,
   selected,
   onSelect,
+  dimmed,
 }: {
   route: CheckpointId[];
   statusOf: (id: CheckpointId) => CheckpointStatus;
   selected?: CheckpointId;
   onSelect: (id: CheckpointId) => void;
+  /** Pins that don't match the current filter are faded out. */
+  dimmed?: (id: CheckpointId) => boolean;
 }) {
   const { tr } = useT();
   const pts = route.map((id) => checkpointById[id].map);
@@ -55,7 +58,7 @@ export function MissionMap({
             accessibilityRole="button"
             accessibilityLabel={tr(c.name)}
             onPress={() => onSelect(id)}
-            style={[styles.pinWrap, { left: `${c.map.x}%`, top: `${c.map.y}%` }]}
+            style={[styles.pinWrap, { left: `${c.map.x}%`, top: `${c.map.y}%` }, dimmed?.(id) && { opacity: 0.25 }]}
           >
             <View style={[styles.pin, { borderColor: ringColor[st] }, isSel && styles.pinSel]}>
               <Image source={media[c.image].source} style={[styles.pinImg, st === 'locked' && { opacity: 0.35 }]} />

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Switch, Text, View } from 'react-native';
 import { Icon, type IconName } from '../../components/Icon';
 import { Button, Card, Chip, LangToggle, Screen, SectionTitle, styles as ui } from '../../components/ui';
-import { checkpointById } from '../../data/checkpoints';
+import { checkpointById, type Checkpoint, type CheckpointId } from '../../data/checkpoints';
 import { companionById } from '../../data/companions';
 import { journeyById } from '../../data/journeys';
 import { useT, type L } from '../../i18n';
@@ -33,12 +33,46 @@ const facts: { icon: IconName; label: 'hoursLabel' | 'ticketLabel' | 'facilities
   },
 ];
 
+const START_TIMES = [7 * 60 + 30, 9 * 60, 13 * 60 + 30, 15 * 60];
+const REST_EVERY = 2;
+const REST_MIN = 10;
+const fmt = (m: number) => `${Math.floor(m / 60)}:${String(m % 60).padStart(2, '0')}`;
+
+// Sample suggestions — confirm with the site and local tourism office.
+const nearby: { icon: IconName; title: L; text: L }[] = [
+  {
+    icon: 'star',
+    title: { vi: 'Đền tưởng niệm Bến Dược', en: 'Bến Dược Memorial Temple' },
+    text: { vi: 'Nơi tưởng niệm các liệt sĩ, nằm trong khu di tích Bến Dược.', en: 'A memorial to fallen soldiers within the Bến Dược site.' },
+  },
+  {
+    icon: 'pin',
+    title: { vi: 'Ẩm thực địa phương', en: 'Local food' },
+    text: { vi: 'Khoai mì luộc chấm muối mè — món ăn gắn với ký ức địa đạo.', en: 'Boiled cassava with sesame salt — a taste tied to tunnel memories.' },
+  },
+  {
+    icon: 'book',
+    title: { vi: 'Làng nghề vùng lân cận', en: 'Nearby craft villages' },
+    text: { vi: 'Bánh tráng phơi sương (Trảng Bàng) và các nghề truyền thống quanh vùng.', en: 'Dew-dried rice paper (Trảng Bàng) and other local crafts.' },
+  },
+];
+
 export default function Info() {
   const { t, tr } = useT();
   const s = useProgress();
   const [confirmReset, setConfirmReset] = useState(false);
+  const [start, setStart] = useState(START_TIMES[1]);
   const route = routeOf(s.journeyId);
-  const totalMin = route.reduce((m, id) => m + checkpointById[id].walkMin + checkpointById[id].expMin, 0);
+
+  // Timeline: walk → experience, with a short rest every couple of stops.
+  const plan = route.reduce<{ id: CheckpointId; c: Checkpoint; arrive: number; leave: number; rest: boolean }[]>((acc, id, i) => {
+    const c = checkpointById[id];
+    const rest = i > 0 && i % REST_EVERY === 0;
+    const prev = acc.length ? acc[acc.length - 1].leave : start;
+    const arrive = prev + (rest ? REST_MIN : 0) + c.walkMin;
+    return [...acc, { id, c, arrive, leave: arrive + c.expMin, rest }];
+  }, []);
+  const totalMin = (plan.length ? plan[plan.length - 1].leave : start) - start;
 
   return (
     <Screen>
@@ -60,32 +94,59 @@ export default function Info() {
         <Text style={ui.muted}>
           {tr(journeyById[s.journeyId ?? 'basic'].name)} · ~{t('minutes', { n: totalMin })}
         </Text>
-        {route.map((id, i) => {
-          const c = checkpointById[id];
+        <View style={[ui.row, { flexWrap: 'wrap', gap: 6 }]}>
+          <Text style={[ui.muted, { fontWeight: '700' }]}>{t('startTime')}:</Text>
+          {START_TIMES.map((m) => (
+            <Chip key={m} label={fmt(m)} active={start === m} onPress={() => setStart(m)} />
+          ))}
+        </View>
+        {plan.map(({ id, c, arrive, rest }, i) => {
           return (
-            <View key={id} style={[ui.row, { alignItems: 'flex-start' }]}>
-              <View
-                style={{
-                  width: 24,
-                  height: 24,
-                  borderRadius: 12,
-                  backgroundColor: s.chapters[id] ? colors.olive : colors.line,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <Text style={{ color: colors.white, fontSize: 12, fontWeight: '700' }}>{i + 1}</Text>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text style={ui.h3}>{tr(c.name)}</Text>
-                <Text style={ui.muted}>
-                  {t('walk', { n: c.walkMin })} · {t('experience', { n: c.expMin })} · {tr(c.accessibility)}
+            <View key={id} style={{ gap: 8 }}>
+              {rest ? (
+                <Text style={[ui.muted, { marginLeft: 34, fontStyle: 'italic' }]}>
+                  ☕ {t('restStop')} · {t('minutes', { n: REST_MIN })}
                 </Text>
+              ) : null}
+              <View style={[ui.row, { alignItems: 'flex-start' }]}>
+                <View
+                  style={{
+                    width: 24,
+                    height: 24,
+                    borderRadius: 12,
+                    backgroundColor: s.chapters[id] ? colors.olive : colors.line,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <Text style={{ color: colors.white, fontSize: 12, fontWeight: '700' }}>{i + 1}</Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={ui.h3}>
+                    <Text style={{ color: colors.ember }}>{fmt(arrive)}</Text> {tr(c.name)}
+                  </Text>
+                  <Text style={ui.muted}>
+                    {t('walk', { n: c.walkMin })} · {t('experience', { n: c.expMin })} · {tr(c.accessibility)}
+                  </Text>
+                </View>
               </View>
             </View>
           );
         })}
+        <Text style={[ui.muted, { fontWeight: '700' }]}>{t('finishAround', { time: fmt(start + totalMin) })}</Text>
       </Card>
+
+      <SectionTitle>{t('nearby')}</SectionTitle>
+      {nearby.map((n) => (
+        <Card key={n.title.vi} style={{ flexDirection: 'row', gap: 12, alignItems: 'center' }}>
+          <Icon name={n.icon} color={colors.earth} />
+          <View style={{ flex: 1 }}>
+            <Text style={ui.h3}>{tr(n.title)}</Text>
+            <Text style={ui.muted}>{tr(n.text)}</Text>
+          </View>
+        </Card>
+      ))}
+      <Text style={[ui.muted, { fontStyle: 'italic' }]}>{t('nearbyNote')}</Text>
 
       <SectionTitle>{t('journeyPack')}</SectionTitle>
       <Card style={{ flexDirection: 'row', gap: 12, alignItems: 'center' }}>
