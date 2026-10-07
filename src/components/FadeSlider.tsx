@@ -22,8 +22,8 @@ export function FadeSlider({ value, onChange, left, right }: { value: number; on
             <View style={{ height: 4, borderRadius: 2, width: `${value * 100}%`, backgroundColor: colors.ember }} />
           </View>
           <View
-            pointerEvents="none"
             style={{
+              pointerEvents: 'none',
               position: 'absolute',
               left: Math.max(0, value * width - 12),
               width: 24,

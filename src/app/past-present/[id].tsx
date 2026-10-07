@@ -32,10 +32,10 @@ export default function PastPresent() {
       <GestureDetector gesture={drag}>
         <View style={styles.frame} onLayout={(e) => setWidth(e.nativeEvent.layout.width)}>
           <Image source={media[now].source} style={fill} resizeMode="cover" />
-          <View style={[styles.thenClip, { width: width * pos }]} pointerEvents="none">
+          <View style={[styles.thenClip, { width: width * pos }, { pointerEvents: 'none' }]}>
             <Image source={media[then].source} style={{ width, height: '100%' }} resizeMode="cover" />
           </View>
-          <View style={[styles.handleLine, { left: width * pos - 1 }]} pointerEvents="none">
+          <View style={[styles.handleLine, { left: width * pos - 1 }, { pointerEvents: 'none' }]}>
             <View style={styles.handle}>
               <Icon name="back" size={14} color={colors.ink} />
               <View style={{ transform: [{ rotate: '180deg' }] }}>
@@ -43,10 +43,10 @@ export default function PastPresent() {
               </View>
             </View>
           </View>
-          <View style={[styles.tag, { left: 10 }]} pointerEvents="none">
+          <View style={[styles.tag, { left: 10 }, { pointerEvents: 'none' }]}>
             <Text style={styles.tagText}>{t('then')}</Text>
           </View>
-          <View style={[styles.tag, { right: 10 }]} pointerEvents="none">
+          <View style={[styles.tag, { right: 10 }, { pointerEvents: 'none' }]}>
             <Text style={styles.tagText}>{t('now')}</Text>
           </View>
         </View>

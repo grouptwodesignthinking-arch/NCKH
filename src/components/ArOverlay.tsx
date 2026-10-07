@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Animated, Easing, StyleSheet } from 'react-native';
+import { Animated, Easing, Platform, StyleSheet } from 'react-native';
 import Svg, { Circle, Line, Path, Rect } from 'react-native-svg';
 import type { ArLayer } from '../data/checkpoints';
 
 const GLOW = '#F2C46D';
+// The native animation driver doesn't exist on web.
+const NATIVE_DRIVER = Platform.OS !== 'web';
 
 /** Hand-drawn style AR layers placed over the camera frame (viewBox 0..100). */
 export function ArOverlay({ layers, revealed }: { layers: ArLayer[]; revealed: number }) {
@@ -11,8 +13,8 @@ export function ArOverlay({ layers, revealed }: { layers: ArLayer[]; revealed: n
   useEffect(() => {
     const loop = Animated.loop(
       Animated.sequence([
-        Animated.timing(pulse, { toValue: 1, duration: 1200, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
-        Animated.timing(pulse, { toValue: 0, duration: 1200, easing: Easing.inOut(Easing.quad), useNativeDriver: true }),
+        Animated.timing(pulse, { toValue: 1, duration: 1200, easing: Easing.inOut(Easing.quad), useNativeDriver: NATIVE_DRIVER }),
+        Animated.timing(pulse, { toValue: 0, duration: 1200, easing: Easing.inOut(Easing.quad), useNativeDriver: NATIVE_DRIVER }),
       ]),
     );
     loop.start();
@@ -21,7 +23,7 @@ export function ArOverlay({ layers, revealed }: { layers: ArLayer[]; revealed: n
   const opacity = pulse.interpolate({ inputRange: [0, 1], outputRange: [0.55, 1] });
 
   return (
-    <Animated.View pointerEvents="none" style={[StyleSheet.absoluteFill, { opacity }]}>
+    <Animated.View style={[StyleSheet.absoluteFill, { opacity, pointerEvents: 'none' }]}>
       <Svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
         {layers.slice(0, revealed).map((l, i) => (
           <Shape key={i} shape={l.shape} />

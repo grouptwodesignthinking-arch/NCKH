@@ -75,7 +75,7 @@ export default function ArScreen() {
         </View>
       ) : null}
 
-      <SafeAreaView style={StyleSheet.absoluteFill} pointerEvents="box-none">
+      <SafeAreaView style={[StyleSheet.absoluteFill, { pointerEvents: 'box-none' }]}>
         <View style={styles.topBar}>
           <Pressable onPress={() => router.back()} style={styles.round} accessibilityLabel={t('close')}>
             <Icon name="close" color={colors.paper} />
@@ -111,7 +111,7 @@ export default function ArScreen() {
         ) : null}
 
         {phase !== 'reveal' ? (
-          <View style={styles.frameWrap} pointerEvents="none">
+          <View style={[styles.frameWrap, { pointerEvents: 'none' }]}>
             <View style={styles.frame}>
               {(['tl', 'tr', 'bl', 'br'] as const).map((k) => (
                 <View key={k} style={[styles.corner, cornerStyle[k]]} />

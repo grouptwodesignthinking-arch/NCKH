@@ -26,13 +26,7 @@ export const fonts = {
   display: 'Georgia',
 };
 
-export const shadow = {
-  shadowColor: '#000',
-  shadowOpacity: 0.12,
-  shadowRadius: 10,
-  shadowOffset: { width: 0, height: 4 },
-  elevation: 3,
-};
+export const shadow = { boxShadow: '0 4px 10px rgba(0, 0, 0, 0.12)' } as const;
 
 /**
  * Full-bleed image style. On web, react-native-web sizes an <Image> from its
