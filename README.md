@@ -1,7 +1,7 @@
 # Củ Chi Stories: chuyện kể dưới lòng đất
 
 > **Bản Heritage (web, dùng trên điện thoại):** https://grouptwodesignthinking-arch.github.io/NCKH/
-> Mã nguồn ở [`heritage/`](heritage/cuchi-stories/README.md), trang xuất bản ở [`docs/`](docs/). Trang in mã QR thử nghiệm: [`docs/ma-tram-CC01-CC06.png`](docs/ma-tram-CC01-CC06.png). Cách bật GitHub Pages: xem [Xuất bản bản Heritage](#xuất-bản-bản-heritage-github-pages) ở cuối trang.
+> Mã nguồn ở [`heritage/`](heritage/cuchi-stories/README.md), trang xuất bản ở [`docs/`](docs/). Mã QR mở trang web: [`docs/qr-web-NCKH.png`](docs/qr-web-NCKH.png) (bản chỉ có mã: [`docs/qr-web-NCKH-don-gian.png`](docs/qr-web-NCKH-don-gian.png)). Trang in mã QR thử nghiệm: [`docs/ma-tram-CC01-CC06.png`](docs/ma-tram-CC01-CC06.png). Cách bật GitHub Pages: xem [Xuất bản bản Heritage](#xuất-bản-bản-heritage-github-pages) ở cuối trang.
 
 **Củ Chi Stories** là app trải nghiệm di sản theo lối kể chuyện, dành cho khách tham quan trẻ (Gen Z) tại Địa đạo Củ Chi. Người dùng không chỉ *đi xem* di tích mà khám phá từng địa điểm như đang bước vào một câu chuyện. Đi cùng câu chuyện là AR trên di tích thật, mô hình 3D, câu chuyện con người, lựa chọn tình huống và Hộ chiếu Ký ức.
 
