@@ -1,0 +1,122 @@
+[
+  {
+    "id": "nap-ham",
+    "code": "CC-01",
+    "title": "Bên dưới những chiếc lá",
+    "category": "Khám phá",
+    "image": "023.webp",
+    "minutes": 4,
+    "stamp": "MẮT TINH",
+    "excerpt": "Một lối vào nhỏ. Một thế giới khác dưới chân. Bắt đầu bằng việc nhìn chậm lại.",
+    "lead": "Nếu không dừng lại, bạn có nhận ra một lối đi ngay dưới những chiếc lá?",
+    "body": "Hãy quan sát bức ảnh lối vào địa đạo. Mép cửa, nền đất và lớp lá nằm gần nhau đến mức rất dễ lướt qua. Đừng vội tìm câu trả lời: thử nhìn vào hình dáng, đường viền và những thay đổi nhỏ trên bề mặt.\n\nỞ trạm này, câu chuyện bắt đầu từ một vật rất nhỏ: chiếc nắp hầm. Một lối vào không chỉ là nơi bước xuống. Nó còn gợi câu hỏi về cách con người thích nghi với cảnh quan và sử dụng những vật liệu quanh mình.\n\nChuyển sang lớp khám phá để xem các điểm được chú thích trên ảnh. Sau đó, trở lại và thử nhận ra chi tiết quan trọng nhất. Khi tham quan thực tế, chỉ tiếp cận lối xuống được hướng dẫn viên cho phép.",
+    "question": "Trong bức ảnh, chi tiết nào giúp lối vào hòa vào nền đất?",
+    "options": [
+      "Lớp lá và màu đất quanh miệng hầm",
+      "Một tấm biển lớn đặt trên cửa",
+      "Ánh sáng từ dưới hầm"
+    ],
+    "answer": 0,
+    "explanation": "Lớp lá và màu đất khiến đường viền lối vào khó nhận ra hơn. Bạn vừa hoàn thành một lượt quan sát có chủ đích."
+  },
+  {
+    "id": "lo-thong-hoi",
+    "code": "CC-02",
+    "title": "Một hơi thở của đất",
+    "category": "Khám phá",
+    "image": "057.webp",
+    "minutes": 3,
+    "stamp": "TINH Ý",
+    "excerpt": "Dừng lại trước một chi tiết nhỏ trên mặt đất để nghĩ về không gian phía dưới.",
+    "lead": "Điều gì kết nối một không gian dưới đất với thế giới phía trên?",
+    "body": "Bức ảnh trong bộ tư liệu được ghi tên là lỗ thông hơi của địa đạo Củ Chi. Hãy quan sát hình dáng, bề mặt và vị trí của nó trước khi mở chú thích.\n\nThay vì chỉ nhìn địa đạo như một đường đi, hãy thử nghĩ về các nhu cầu của con người bên trong: không khí, ánh sáng và sự kết nối. Mỗi nhu cầu mở ra một cách đọc không gian khác nhau.\n\nSơ đồ khám phá trong ứng dụng giúp bạn hình dung mối liên hệ giữa mặt đất và không gian phía dưới. Đây là sơ đồ minh họa, không phải bản đo địa đạo tại một vị trí cụ thể.",
+    "question": "Lỗ thông hơi gợi đến nhu cầu nào của không gian dưới đất?",
+    "options": [
+      "Trang trí lối tham quan",
+      "Trao đổi không khí",
+      "Đánh dấu nơi chụp ảnh"
+    ],
+    "answer": 1,
+    "explanation": "Điểm quan sát này dẫn chúng ta đến nhu cầu trao đổi không khí của không gian dưới đất."
+  },
+  {
+    "id": "bep-hoang-cam",
+    "code": "CC-03",
+    "title": "Giữ ấm một bữa cơm",
+    "category": "Đời sống",
+    "image": "066.webp",
+    "minutes": 4,
+    "stamp": "ĐỒNG CẢM",
+    "excerpt": "Từ gian bếp, nhìn lịch sử qua những nhu cầu gần gũi nhất của đời sống.",
+    "lead": "Có những câu chuyện bắt đầu từ một bữa cơm, không phải từ một trận đánh.",
+    "body": "Trong ảnh tư liệu là khu bếp Hoàng Cầm. Hãy nhìn những đồ vật quanh bếp: chúng gợi ra công việc, việc chuẩn bị và nhịp sinh hoạt hằng ngày.\n\nMột điểm tham quan có thể được nhìn từ nhiều phía. Khi chú ý đến bếp, ta dành chỗ cho câu hỏi về ăn uống, chăm sóc và duy trì đời sống. Những vật dụng bình thường cũng có thể mở ra một câu chuyện đáng lắng nghe.\n\nKhi gặp hướng dẫn viên, bạn có thể hỏi: “Chi tiết nào ở khu bếp thường bị khách tham quan bỏ qua?” Câu trả lời cụ thể tại điểm đến sẽ bổ sung cho những gì bức ảnh chưa thể kể.",
+    "question": "Góc nhìn nào được câu chuyện này đặt ở trung tâm?",
+    "options": [
+      "Kỷ lục về chiều dài địa đạo",
+      "Kỹ thuật chụp ảnh phong cảnh",
+      "Bữa ăn và sinh hoạt hằng ngày"
+    ],
+    "answer": 2,
+    "explanation": "Góc nhìn đời sống giúp chúng ta chú ý đến những nhu cầu và công việc bình thường của con người."
+  },
+  {
+    "id": "long-dia-dao",
+    "code": "CC-04",
+    "title": "Theo một đường đất nhỏ",
+    "category": "Không gian",
+    "image": "038.webp",
+    "minutes": 4,
+    "stamp": "KHÁM PHÁ",
+    "excerpt": "Nhìn vào lòng địa đạo và thử cảm nhận sự thay đổi của không gian.",
+    "lead": "Khi không gian thu hẹp, cách quan sát của chúng ta cũng thay đổi.",
+    "body": "Nhìn bức ảnh lòng địa đạo: đường cong, bề mặt đất và khoảng sáng phía trước tạo ra cảm nhận rất khác so với lối đi trên mặt đất.\n\nHãy thử mô tả ba điều bạn thực sự nhìn thấy, trước khi nói về điều bạn tưởng tượng. Việc phân biệt quan sát với suy diễn giúp trải nghiệm lịch sử cẩn trọng và sâu hơn.\n\nSơ đồ trong ứng dụng chỉ phục vụ tìm hiểu. Khi đến di tích, hãy làm theo hướng dẫn về tuyến được mở, sức khỏe và an toàn; không dùng sơ đồ này để tự đi trong địa đạo.",
+    "question": "Cách nào giúp quan sát cẩn trọng hơn?",
+    "options": [
+      "Mô tả điều nhìn thấy trước khi diễn giải",
+      "Coi mọi tưởng tượng là sự kiện",
+      "Bỏ qua hướng dẫn tại di tích"
+    ],
+    "answer": 0,
+    "explanation": "Mô tả trước, diễn giải sau giúp phân biệt bằng chứng trong ảnh với suy nghĩ của riêng mình."
+  },
+  {
+    "id": "dau-tich",
+    "code": "CC-05",
+    "title": "Điều mặt đất còn giữ",
+    "category": "Ký ức",
+    "image": "085.webp",
+    "minutes": 3,
+    "stamp": "LẮNG NGHE",
+    "excerpt": "Một khoảng trũng trong rừng, một dấu tích để dừng lại và đặt câu hỏi.",
+    "lead": "Một cảnh quan có thể giữ nhiều lớp ký ức hơn những gì ta thấy trong lần nhìn đầu.",
+    "body": "Bức ảnh ghi lại một hố bom được giới thiệu tại khu di tích Củ Chi. Hãy quan sát tỷ lệ của khoảng trũng so với cây cối và lối đi quanh nó.\n\nMột dấu tích không tự nói hết câu chuyện của mình. Biển giới thiệu, tư liệu và lời giải thích tại di tích giúp đặt điều ta thấy vào bối cảnh.\n\nỞ trạm này, hãy giữ lại một câu hỏi bạn muốn tìm hiểu thêm. Không cần biến mọi điểm dừng thành một câu trả lời hoàn chỉnh.",
+    "question": "Điều gì giúp hiểu dấu tích trong bối cảnh?",
+    "options": [
+      "Chỉ dựa vào cảm giác khi nhìn ảnh",
+      "Đối chiếu biển giới thiệu và tư liệu tại di tích",
+      "Đoán sự kiện từ màu của đất"
+    ],
+    "answer": 1,
+    "explanation": "Đối chiếu tư liệu và thông tin tại di tích giúp cách hiểu có căn cứ hơn."
+  },
+  {
+    "id": "loi-rung",
+    "code": "CC-06",
+    "title": "Mang một câu chuyện về",
+    "category": "Ký ức",
+    "image": "097.webp",
+    "minutes": 3,
+    "stamp": "GÌN GIỮ",
+    "excerpt": "Khép hành trình bằng một điều bạn muốn nhớ, thay vì chỉ một tấm ảnh.",
+    "lead": "Bạn sẽ mang điều gì của chuyến đi này về cùng mình?",
+    "body": "Hành trình trở lại với lối đi dưới tán cây. Sau những điểm dừng, cùng một cảnh quan có thể gợi cho bạn những câu hỏi khác lúc ban đầu.\n\nHãy chọn một chi tiết mà bạn muốn kể lại: chiếc nắp hầm, lỗ thông hơi, gian bếp hay đường đất. Điều gì khiến nó ở lại trong trí nhớ?\n\nViết một ghi chú ngắn trong hộ chiếu của bạn. Không có câu trả lời mẫu cho ký ức cá nhân. Nếu chia sẻ, hãy phân biệt điều đã quan sát, điều đã được giải thích và cảm nhận riêng của mình.",
+    "question": "Khi kể lại chuyến đi, cách nào giúp câu chuyện rõ ràng hơn?",
+    "options": [
+      "Thêm chi tiết lịch sử chưa kiểm chứng",
+      "Chỉ kể số điểm đã nhận",
+      "Phân biệt quan sát, thông tin và cảm nhận"
+    ],
+    "answer": 2,
+    "explanation": "Ký ức cá nhân có giá trị riêng. Phân biệt nó với thông tin lịch sử giúp người nghe hiểu đúng."
+  }
+]
